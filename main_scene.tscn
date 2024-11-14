@@ -1,27 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://dvqmup262b7tn"]
+[gd_scene load_steps=6 format=3 uid="uid://dvqmup262b7tn"]
 
 [ext_resource type="PackedScene" uid="uid://d00gvwlu8x1q" path="res://Player/player.tscn" id="1_2fgek"]
 [ext_resource type="PackedScene" uid="uid://bq1lxfqy0bso1" path="res://House/house_prototype.tscn" id="2_pi6ls"]
 
-[sub_resource type="Environment" id="Environment_eylns"]
-ambient_light_source = 2
-ambient_light_color = Color(0.408329, 0.408329, 0.408329, 1)
-ambient_light_energy = 6.66
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gebp6"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_curve = 0.909429
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_curve = 0.091896
 
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xmiv5"]
-lifetime_randomness = 0.1
-direction = Vector3(0, 0, 0)
-initial_velocity_min = 0.2
-initial_velocity_max = 2.0
-gravity = Vector3(0, 0, 0)
-scale_min = 0.2
-scale_max = 0.3
+[sub_resource type="Sky" id="Sky_vgu0c"]
+sky_material = SubResource("ProceduralSkyMaterial_gebp6")
 
-[sub_resource type="BoxMesh" id="BoxMesh_y7e8t"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ciap6"]
+[sub_resource type="Environment" id="Environment_d3r4r"]
+background_mode = 2
+sky = SubResource("Sky_vgu0c")
 
 [node name="Main Scene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.35417, -0.915255, 0.192023, 0.221618, 0.281626, 0.93358, -0.908542, -0.28809, 0.30258, 0, 8, 0)
+shadow_enabled = true
+shadow_blur = 1.773
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d3r4r")
 
 [node name="Player" parent="." instance=ExtResource("1_2fgek")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00418, 0)
@@ -29,25 +32,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00418, 0)
 [node name="Camera3D" parent="Player" index="0"]
 metadata/_edit_lock_ = true
 
-[node name="CSGMesh3D" parent="Player" index="1"]
-metadata/_edit_lock_ = true
-
-[node name="PlaceHolderWorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_eylns")
-
 [node name="House Prototype" parent="." instance=ExtResource("2_pi6ls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
-[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7552, -4.37396)
-amount = 4
-lifetime = 2.0
-explosiveness = 0.1
-randomness = 0.2
-process_material = SubResource("ParticleProcessMaterial_xmiv5")
-draw_passes = 2
-draw_pass_1 = SubResource("BoxMesh_y7e8t")
-draw_pass_2 = SubResource("CapsuleMesh_ciap6")
+[node name="Pickable Object" parent="House Prototype" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -5, -2)
 
 [connection signal="input_event" from="House Prototype/Pickable Object/Area3D" to="Player" method="_on_area_3d_input_event"]
 

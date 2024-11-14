@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d00gvwlu8x1q"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_v6yjc"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_sjw1d"]
+[ext_resource type="Texture2D" uid="uid://me2b32d0uj16" path="res://Player/Player.png" id="2_2kbr6"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_v6yjc")
@@ -10,5 +9,6 @@ script = ExtResource("1_v6yjc")
 [node name="Camera3D" type="Camera3D" parent="."]
 fov = 60.0
 
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-mesh = SubResource("CapsuleMesh_sjw1d")
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.85, 0)
+texture = ExtResource("2_2kbr6")
