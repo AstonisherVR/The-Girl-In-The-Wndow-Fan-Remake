@@ -1,35 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq1lxfqy0bso1"]
+[gd_scene load_steps=2 format=3 uid="uid://bq1lxfqy0bso1"]
 
-[ext_resource type="Material" uid="uid://dw5n0qg0yonu1" path="res://Assets/White Grid.tres" id="1_awabc"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4kih1"]
-albedo_color = Color(0.141176, 1, 1, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xbdds"]
+[ext_resource type="Material" uid="uid://dw5n0qg0yonu1" path="res://General Assets/White Grid.tres" id="1_awabc"]
 
 [node name="House Prototype" type="CSGCombiner3D"]
-use_collision = true
 
 [node name="Box Outside" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
 flip_faces = true
-size = Vector3(12, 13, 12)
+size = Vector3(10, 7, 10)
 material = ExtResource("1_awabc")
 
 [node name="Box Inside" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5, 0)
 operation = 2
-size = Vector3(11, 11, 11)
+size = Vector3(9, 5, 9)
 material = ExtResource("1_awabc")
 
 [node name="Door Box" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.23854, -5.775)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.51146, -4.975)
 operation = 2
-size = Vector3(1.5, 2.5, 1)
-
-[node name="Pickable Object" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -5, -4)
-material = SubResource("StandardMaterial3D_4kih1")
-
-[node name="Area3D" type="Area3D" parent="Pickable Object"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pickable Object/Area3D"]
-shape = SubResource("BoxShape3D_xbdds")
+size = Vector3(2, 3, 1)

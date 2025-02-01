@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvqmup262b7tn"]
+
+[ext_resource type="PackedScene" uid="uid://d00gvwlu8x1q" path="res://Player/player.tscn" id="1_2fgek"]
+[ext_resource type="PackedScene" uid="uid://bq1lxfqy0bso1" path="res://House/house_prototype.tscn" id="2_pi6ls"]
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="3_tl8y8"]
+[ext_resource type="Resource" uid="uid://cvrnkt1raa2lr" path="res://Items/Hammer/hammer.tres" id="4_mne4e"]
+[ext_resource type="PackedScene" uid="uid://bvwpenmrck3h1" path="res://Inventory/inventory_ui.tscn" id="4_p8lrm"]
+[ext_resource type="Resource" uid="uid://qjestkaf0ux4" path="res://Items/Candle/candle.tres" id="5_wjs4o"]
+[ext_resource type="Resource" uid="uid://dgtexkmoux711" path="res://Items/Book/book.tres" id="6_mc1i1"]
+[ext_resource type="Script" uid="uid://cuap5ypbh5ahh" path="res://Levels/debug_control.gd" id="8_wjs4o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gebp6"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+sky_curve = 0.909429
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_curve = 0.091896
+
+[sub_resource type="Sky" id="Sky_vgu0c"]
+sky_material = SubResource("ProceduralSkyMaterial_gebp6")
+
+[sub_resource type="Environment" id="Environment_d3r4r"]
+background_mode = 2
+sky = SubResource("Sky_vgu0c")
+
+[node name="Main Scene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.35417, -0.915255, 0.192023, 0.221618, 0.281626, 0.93358, -0.908542, -0.28809, 0.30258, 0, 8, 0)
+shadow_enabled = true
+shadow_blur = 1.773
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_d3r4r")
+
+[node name="Player" parent="." instance=ExtResource("1_2fgek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00417995, 0)
+
+[node name="House Prototype" parent="." instance=ExtResource("2_pi6ls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Base Item" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.34256, 0.375764, -4.42815)
+
+[node name="Base Item2" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0.745943, 1.46872, -4.8)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item3" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -3.60581, 0.979541, -0.514148)
+item_data = ExtResource("4_mne4e")
+
+[node name="Base Item4" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.656294, 0.363012, 0, -0.363012, 0.656294, 4.02925, 3.31746, -1.63228)
+
+[node name="Base Item5" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.586653, -0.296224, 0.361373, 0.338053, 0.669492, 0, -0.322582, 0.162884, 0.657198, -4.48597, 3.92275, 4.41362)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item13" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 1.32218, 0.91494, -1.63865)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item14" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.696287, 0.27872, 0, -0.27872, 0.696287, 0, 0, 0, 0.75, -4.51482, 3.54477, -1.63865)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item6" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.568857, 0.090347, 0.480353, 0, 0.737076, -0.138633, -0.488776, 0.105149, 0.559054, 4.70104, 0.82664, 1.5872)
+item_data = ExtResource("4_mne4e")
+
+[node name="Base Item8" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -2.54116, 1.46872, -4.8)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item9" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 3.8133, 0.9261, -3.72935)
+item_data = ExtResource("4_mne4e")
+
+[node name="Base Item10" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -3.52985, 0.230737, 5.29011)
+
+[node name="Base Item11" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 2.00184, 2.2674, 3.54231)
+item_data = ExtResource("5_wjs4o")
+
+[node name="Base Item12" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 4.03411, 0.82664, 4.29169)
+item_data = ExtResource("4_mne4e")
+
+[node name="Base Item7" parent="." instance=ExtResource("3_tl8y8")]
+transform = Transform3D(0.75, 0, 0, 0, 0.64529, -0.382232, 0, 0.382232, 0.64529, -4.38765, 0.375764, 2.87654)
+item_data = ExtResource("6_mc1i1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory UI" parent="CanvasLayer" instance=ExtResource("4_p8lrm")]
+
+[node name="DEBUG_CONTROL" type="Panel" parent="CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1277.0
+offset_top = -1443.0
+offset_right = 1277.0
+offset_bottom = -185.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("8_wjs4o")
+
+[node name="Current Selected Item" type="Label" parent="CanvasLayer/DEBUG_CONTROL"]
+layout_mode = 2
+offset_top = 88.0
+offset_right = 2554.0
+offset_bottom = 149.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 44
+text = "No Item Selected"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="CanvasLayer/DEBUG_CONTROL"]
+layout_mode = 2
+offset_top = 153.0
+offset_right = 2554.0
+offset_bottom = 187.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+
+[node name="Label4" type="Label" parent="CanvasLayer/DEBUG_CONTROL"]
+layout_mode = 2
+offset_top = 191.0
+offset_right = 2554.0
+offset_bottom = 217.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 18
+
+[node name="Player Inventory Data" type="Label" parent="CanvasLayer/DEBUG_CONTROL"]
+layout_mode = 2
+offset_top = 1211.0
+offset_right = 2554.0
+offset_bottom = 1256.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Player Inventory data"
+horizontal_alignment = 1
+autowrap_mode = 1

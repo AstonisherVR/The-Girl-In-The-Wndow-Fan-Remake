@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="The Girl In The Wndow Fan Game"
-run/main_scene="res://main_scene.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Assets/The Girl.png"
+run/main_scene="uid://dvqmup262b7tn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://General Assets/The Girl.png"
+
+[autoload]
+
+Global="*res://Autoloads/Global.gd"
 
 [debug]
 
@@ -25,9 +29,15 @@ gdscript/warnings/unsafe_call_argument=2
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/size/resizable=false
+window/size/viewport_width=2560
+window/size/viewport_height=1440
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
+
+[editor]
+
+movie_writer/fps=30
 
 [filesystem]
 
@@ -35,18 +45,6 @@ import/blender/enabled.android=true
 
 [input]
 
-UP={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":87,"location":0,"echo":false,"script":null)
-]
-}
-DOWN={
-"deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":83,"location":0,"echo":false,"script":null)
-]
-}
 LEFT={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
@@ -134,3 +132,34 @@ M_CLICK={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194438,"key_label":0,"unicode":48,"location":0,"echo":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/locale_filter_mode=0
+
+[layer_names]
+
+3d_render/layer_1="World"
+3d_render/layer_2="Player"
+3d_render/layer_3="Items"
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Pickup Item"
+3d_physics/layer_3="Interact Object"
+3d_physics/layer_4="Non Interactable Object"
+
+[physics]
+
+common/physics_ticks_per_second=10
+common/max_physics_steps_per_frame=4
+3d/physics_engine="Jolt Physics"
+2d/solver/solver_iterations=4
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.230315, 0.230315, 0.230315, 1)
+viewport/hdr_2d=true

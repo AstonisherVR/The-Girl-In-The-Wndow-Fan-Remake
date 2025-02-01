@@ -1,14 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://d00gvwlu8x1q"]
+[gd_scene load_steps=4 format=3 uid="uid://d00gvwlu8x1q"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_v6yjc"]
+[ext_resource type="Script" uid="uid://bus32tu4pso18" path="res://Player/player.gd" id="1_v6yjc"]
 [ext_resource type="Texture2D" uid="uid://me2b32d0uj16" path="res://Player/Player.png" id="2_2kbr6"]
+[ext_resource type="Resource" uid="uid://bwv3dsew20e5h" path="res://Inventory/Player_Inventory_Data.tres" id="2_btcbx"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_v6yjc")
+inventory = ExtResource("2_btcbx")
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 fov = 60.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.85, 0)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.828456, 0)
 texture = ExtResource("2_2kbr6")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://hyprkljqw17j"]
+
+[ext_resource type="Script" uid="uid://brdnmhqwbyst1" path="res://Items/item_slot_ui.gd" id="1_y8ttb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twgb5"]
+bg_color = Color(0.319255, 0.319255, 0.319255, 1)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3evxb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_right = 22
+corner_radius_bottom_left = 22
+
+[node name="Item Slot UI" type="Button"]
+custom_minimum_size = Vector2(160, 160)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -80.0
+offset_right = 80.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_twgb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3evxb")
+button_mask = 3
+script = ExtResource("1_y8ttb")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvwpenmrck3h1"]
+
+[ext_resource type="PackedScene" uid="uid://hyprkljqw17j" path="res://Items/item_slot.tscn" id="1_5v8q7"]
+[ext_resource type="Texture2D" uid="uid://bm46xgpl3jlb4" path="res://General Assets/Lether Border.jpg" id="1_gf3dx"]
+[ext_resource type="Script" uid="uid://djym4px6tebe0" path="res://UI & Menus/inventory_ui.gd" id="2_8pw5v"]
+
+[node name="Inventory UI" type="NinePatchRect"]
+self_modulate = Color(0.817521, 0.817521, 0.817521, 1)
+custom_minimum_size = Vector2(2540, 192)
+anchors_preset = -1
+anchor_left = 0.00390625
+anchor_top = 0.866667
+anchor_right = 0.996094
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gf3dx")
+region_rect = Rect2(0, 0, 720, 360)
+patch_margin_left = 48
+patch_margin_top = 12
+patch_margin_right = 48
+patch_margin_bottom = 12
+script = ExtResource("2_8pw5v")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBox Items Container" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(2460, 138)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1230.0
+offset_top = -69.0
+offset_right = 1230.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Item Slot 1" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 2" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 3" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 4" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 5" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 6" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 7" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 8" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 9" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 10" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 11" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 12" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 13" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2
+
+[node name="Item Slot 14" parent="HBox Items Container" instance=ExtResource("1_5v8q7")]
+layout_mode = 2

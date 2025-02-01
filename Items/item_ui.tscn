@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://mvcdq1delo7u"]
+
+[ext_resource type="Script" uid="uid://gnymul7ulmdc" path="res://Items/item_ui.gd" id="4_x0p7e"]
+
+[node name="Item UI" type="TextureRect"]
+custom_minimum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+mouse_filter = 2
+stretch_mode = 3
+script = ExtResource("4_x0p7e")
