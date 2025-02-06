@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cjgjakgjqloqj"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_3qjj7"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3qjj7"]
+size = Vector2(148, 148)
+
+[resource]
+script = ExtResource("1_3qjj7")
+name = "TV Dial"
+texture = SubResource("PlaceholderTexture2D_3qjj7")
+can_combine = false
+valid_combinations = {}
+metadata/_custom_type_script = ExtResource("1_3qjj7")

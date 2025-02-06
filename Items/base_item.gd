@@ -3,7 +3,7 @@ class_name BaseItem extends Area3D
 var mouse_in: bool = false
 
 @export var item_data: ItemResource
-@onready var player_inventory: InventoryResource = preload("res://Inventory/Player_Inventory_Data.tres")
+@onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
 
 ## When an item gets collected, the inventory data changes directly
 func collect_item() -> void:

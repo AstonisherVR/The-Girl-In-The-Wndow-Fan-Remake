@@ -7,4 +7,6 @@
 script = ExtResource("1_6wrnq")
 name = "Candle"
 texture = ExtResource("2_c7t77")
+can_combine = true
+valid_combinations = {}
 metadata/_custom_type_script = ExtResource("1_6wrnq")

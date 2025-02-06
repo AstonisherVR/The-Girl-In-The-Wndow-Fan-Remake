@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://d11mf7fctn1fx"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_gn6ta"]
+
+[sub_resource type="Gradient" id="Gradient_gn6ta"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.28, 0.111627, 0.0504, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_uym8a"]
+gradient = SubResource("Gradient_gn6ta")
+height = 128
+
+[resource]
+script = ExtResource("1_gn6ta")
+name = "Floor Plank"
+texture = SubResource("GradientTexture2D_uym8a")
+can_combine = true
+metadata/_custom_type_script = ExtResource("1_gn6ta")

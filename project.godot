@@ -15,10 +15,6 @@ run/main_scene="uid://dvqmup262b7tn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://General Assets/The Girl.png"
 
-[autoload]
-
-Global="*res://Autoloads/Global.gd"
-
 [debug]
 
 gdscript/warnings/untyped_declaration=2
