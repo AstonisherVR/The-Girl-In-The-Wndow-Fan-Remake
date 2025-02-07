@@ -39,16 +39,9 @@ func insert_item_data_at_index(item_data_to_insert: ItemResource, index: int) ->
 func remove_item_data_at_index(index: int) -> void:
 	item_data_list[index] = null
 
-# DANGER This is important OLD code from the tutorial
-#func remove_item_data_at_index(index: int) -> void:
-	#item_data_list[index] = null
-	#items_updated.emit()
-#func insert_item_data_at_index(item_data_to_insert: ItemResource, index: int) -> void:
-	#var old_index: int = item_data_list.find(item_data_to_insert)
-	#if old_index != -1:
-		#remove_item_data_at_index(old_index)
-	#item_data_list[index] = item_data_to_insert
-	#items_updated.emit()
+func use_item(use_item_data: ItemResource) -> void:
+	remove_item_data(use_item_data)
+	items_updated.emit()
 
 func combine_items(item_1: ItemResource, item_2: ItemResource) -> void:
 	# Creates the two posible combination keys
@@ -74,3 +67,15 @@ func combine_items(item_1: ItemResource, item_2: ItemResource) -> void:
 	# Add the new combined item
 	insert_item_data_at_index(combined_item_data, index_of_item_2)
 	items_updated.emit()
+
+
+# WARNING This is important OLD code from the tutorial
+#func remove_item_data_at_index(index: int) -> void:
+	#item_data_list[index] = null
+	#items_updated.emit()
+#func insert_item_data_at_index(item_data_to_insert: ItemResource, index: int) -> void:
+	#var old_index: int = item_data_list.find(item_data_to_insert)
+	#if old_index != -1:
+		#remove_item_data_at_index(old_index)
+	#item_data_list[index] = item_data_to_insert
+	#items_updated.emit()

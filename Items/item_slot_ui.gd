@@ -22,3 +22,8 @@ func remove_item_ui() -> void:
 ## A check to see if the slot is empty
 func is_slot_empty() -> bool:
 	return !my_child_item_ui
+
+#func _on_timer_timeout() -> void:
+	#if my_index_in_inventory_ui == 0:
+		#print(focus_mode)
+		#print(my_child_item_ui)

@@ -14,8 +14,7 @@ fill_to = Vector2(1, 1)
 
 [resource]
 script = ExtResource("1_6b8bl")
-name = "Blue Jacket"
+name = &"Blue Jacket"
 texture = SubResource("GradientTexture2D_ojmn0")
-can_combine = false
-valid_combinations = {}
+can_combine_with_item = false
 metadata/_custom_type_script = ExtResource("1_6b8bl")

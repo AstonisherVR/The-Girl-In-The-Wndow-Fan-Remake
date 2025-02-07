@@ -7,10 +7,10 @@ const player_inventory = preload("uid://bwv3dsew20e5h")
 
 func _input(event: InputEvent) -> void:
 	if OS.is_debug_build():
-		if inventory_ui.currently_selected_ui_item:
-			var ui_sel_it := inventory_ui.currently_selected_ui_item
-			var itm_name: String = ui_sel_it.item_data.name
-			selected_item_label.text = "Selected Item "+ itm_name
-		else:
+		if !inventory_ui.currently_selected_ui_item:
 			selected_item_label.text = "No Item Selected"
+			return
+		var ui_sel_it := inventory_ui.currently_selected_ui_item
+		var itm_name: String = ui_sel_it.item_data.name
+		selected_item_label.text = "Selected Item "+ itm_name
 		player_inventory_data.text = str(player_inventory.item_data_list)

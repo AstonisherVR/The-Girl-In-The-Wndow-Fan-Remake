@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://caukvxn00n7ic"]
+
+[ext_resource type="Script" uid="uid://bum2cjmnupma" path="res://base_interactable.gd" id="1_fxgow"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s3xij"]
+resource_local_to_scene = true
+size = Vector3(1.1, 1.1, 1.1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fxgow"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h3yni"]
+shading_mode = 2
+diffuse_mode = 3
+albedo_texture = SubResource("PlaceholderTexture2D_fxgow")
+uv1_scale = Vector3(5, 5, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h3yni"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_h3yni")
+
+[node name="Base Interactable" type="Area3D"]
+collision_layer = 4
+script = ExtResource("1_fxgow")
+item_name_to_interact_with = &"Key"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_s3xij")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_h3yni")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

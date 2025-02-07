@@ -1,33 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://hyprkljqw17j"]
+[gd_scene load_steps=6 format=3 uid="uid://hyprkljqw17j"]
 
 [ext_resource type="Script" uid="uid://brdnmhqwbyst1" path="res://Items/item_slot_ui.gd" id="1_y8ttb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twgb5"]
-bg_color = Color(0.941176, 0.262745, 0.941176, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-border_blend = true
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6b3u"]
-bg_color = Color(0.941176, 0.611765, 0.941176, 1)
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
+bg_color = Color(0.3477, 0.45144, 0.57, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3evxb"]
-bg_color = Color(0.94, 0.94, 0.94, 1)
-corner_radius_top_left = 22
-corner_radius_top_right = 22
-corner_radius_bottom_right = 22
-corner_radius_bottom_left = 22
+bg_color = Color(0.632414, 0.704389, 0.787348, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_twgb5"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y8ttb"]
+bg_color = Color(0.931291, 0.949799, 0.971489, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
 
 [node name="Item Slot UI" type="Button"]
 custom_minimum_size = Vector2(160, 160)
@@ -44,10 +41,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_force_pass_scroll_events = false
 mouse_default_cursor_shape = 2
-theme_override_styles/focus = SubResource("StyleBoxFlat_twgb5")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i6b3u")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3evxb")
-theme_override_styles/normal = SubResource("StyleBoxFlat_3evxb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_i6b3u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3evxb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_twgb5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y8ttb")
+action_mode = 0
 button_mask = 3
 script = ExtResource("1_y8ttb")
 
@@ -61,3 +59,8 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

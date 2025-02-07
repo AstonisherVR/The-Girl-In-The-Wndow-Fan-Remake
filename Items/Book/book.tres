@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_tv45l")
-name = "Book"
+name = &"Book"
 texture = ExtResource("2_exekt")
+can_combine_with_item = false
 metadata/_custom_type_script = ExtResource("1_tv45l")

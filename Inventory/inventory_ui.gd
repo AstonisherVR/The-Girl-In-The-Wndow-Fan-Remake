@@ -5,7 +5,7 @@ class_name InventoryUI extends NinePatchRect
 @onready var ui_item_slots: Array[Node] = %"HBox Items Container".get_children()
 
 ## Tracks the currently selected UI item TextureRect
-var currently_selected_ui_item: ItemUI
+static var currently_selected_ui_item: ItemUI
 
 func _ready() -> void:
 	connect_signals()
@@ -38,7 +38,7 @@ func _on_slot_clicked(item_slot_ui: ItemSlotUI) -> void:
 	elif currently_selected_ui_item == item_slot_ui.my_child_item_ui:
 		_deselect_item()
 	# If the player item and the selected item can combine, combine them and select the new item
-	elif currently_selected_ui_item.item_data.can_combine and item_slot_ui.my_child_item_ui.item_data.can_combine:
+	elif currently_selected_ui_item.item_data.can_combine_with_item and item_slot_ui.my_child_item_ui.item_data.can_combine_with_item:
 		_combine_item(item_slot_ui)
 		_select_item(item_slot_ui)
 	# Otherwise, select the new item
@@ -71,7 +71,7 @@ func update_item_ui_to_match_item_data() -> void:
 		var current_item_data: ItemResource = player_inventory.item_data_list[index]
 		# Gets the current slot UI of the iteration
 		var current_item_slot_ui: ItemSlotUI = (ui_item_slots[index] as ItemSlotUI)
-		# Gets the current item UI of the iteration from the slot
+		# Gets the c	urrent item UI of the iteration from the slot
 		var current_item_ui: ItemUI = current_item_slot_ui.my_child_item_ui
 
 		# Will skip this iteration if the item data is null

@@ -7,8 +7,7 @@ size = Vector2(148, 148)
 
 [resource]
 script = ExtResource("1_3qjj7")
-name = "TV Dial"
+name = &"TV Dial"
 texture = SubResource("PlaceholderTexture2D_3qjj7")
-can_combine = false
-valid_combinations = {}
+can_combine_with_item = false
 metadata/_custom_type_script = ExtResource("1_3qjj7")

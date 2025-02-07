@@ -5,8 +5,7 @@
 
 [resource]
 script = ExtResource("1_0ktwm")
-name = "Defult"
+name = &"Defult"
 texture = ExtResource("2_uefoy")
-can_combine = true
-valid_combinations = {}
+can_combine_with_item = true
 metadata/_custom_type_script = ExtResource("1_0ktwm")

@@ -4,9 +4,11 @@
 [ext_resource type="Resource" uid="uid://diypkjkbko5nh" path="res://Items/basic_item.tres" id="2_u2ty4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bdpob"]
+resource_local_to_scene = true
 size = Vector3(1.1, 1.1, 1.1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_bdpob"]
+resource_local_to_scene = true
 
 [node name="Base Item" type="Area3D"]
 collision_layer = 2
