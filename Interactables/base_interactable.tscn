@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://caukvxn00n7ic"]
 
-[ext_resource type="Script" uid="uid://bum2cjmnupma" path="res://base_interactable.gd" id="1_fxgow"]
+[ext_resource type="Script" uid="uid://bum2cjmnupma" path="res://Interactables/base_interactable.gd" id="1_fxgow"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s3xij"]
 resource_local_to_scene = true
@@ -21,7 +21,6 @@ material = SubResource("StandardMaterial3D_h3yni")
 [node name="Base Interactable" type="Area3D"]
 collision_layer = 4
 script = ExtResource("1_fxgow")
-item_name_to_interact_with = &"Key"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_s3xij")

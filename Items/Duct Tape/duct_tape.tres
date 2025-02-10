@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://brfw3r6tc0fnd"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_7r81n"]
+
+[resource]
+script = ExtResource("1_7r81n")
+name = &"Duct tape"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_7r81n")

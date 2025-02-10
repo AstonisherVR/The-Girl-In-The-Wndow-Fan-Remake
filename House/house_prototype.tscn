@@ -17,6 +17,6 @@ size = Vector3(9, 5, 9)
 material = ExtResource("1_awabc")
 
 [node name="Door Box" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.51146, -4.975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.49866, -4.975)
 operation = 2
 size = Vector3(2, 3, 1)

@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://cb7c1phwyeo4i"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_i8ybf"]
+[ext_resource type="Resource" uid="uid://8n0tq04rl2l6" path="res://Items/Stone/stone.tres" id="2_csoxn"]
+[ext_resource type="Texture2D" uid="uid://di7q5kgpfsosm" path="res://General Assets/Placeholder Texture Red.png" id="3_ji3sa"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3vqp0"]
+radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bi6b"]
+albedo_color = Color(0.313276, 0, 0.013675, 1)
+albedo_texture = ExtResource("3_ji3sa")
+
+[sub_resource type="SphereMesh" id="SphereMesh_ltfbo"]
+radius = 0.1
+height = 0.2
+
+[node name="Stone" instance=ExtResource("1_i8ybf")]
+item_data = ExtResource("2_csoxn")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_3vqp0")
+
+[node name="MeshInstance3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_4bi6b")
+mesh = SubResource("SphereMesh_ltfbo")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://fvhk0b05yee4"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_74emn"]
+[ext_resource type="Resource" uid="uid://cjgjakgjqloqj" path="res://Items/Tv Dial/tv_dial.tres" id="2_q8e5v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q8e5v"]
+resource_local_to_scene = true
+size = Vector3(0.15, 0.15, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jkiq5"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.1, 0.1)
+
+[node name="TV Dial" instance=ExtResource("1_74emn")]
+item_data = ExtResource("2_q8e5v")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_q8e5v")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_jkiq5")

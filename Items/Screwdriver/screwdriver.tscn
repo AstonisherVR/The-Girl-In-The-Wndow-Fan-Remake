@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxtlqajm3jpcq"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_7kvvf"]
+[ext_resource type="Resource" uid="uid://c0mhor3opjw4u" path="res://Items/Screwdriver/screwdriver.tres" id="2_ft0dx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ft0dx"]
+resource_local_to_scene = true
+size = Vector3(1, 0.25, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ft0dx"]
+size = Vector3(1, 0.25, 0.25)
+
+[node name="Screwdriver" instance=ExtResource("1_7kvvf")]
+item_data = ExtResource("2_ft0dx")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_ft0dx")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_ft0dx")

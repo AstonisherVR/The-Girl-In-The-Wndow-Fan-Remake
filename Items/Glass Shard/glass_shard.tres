@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://huo4wqdilka8"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_8p8hj"]
+
+[resource]
+script = ExtResource("1_8p8hj")
+name = &"Glass Shard"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_8p8hj")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bus32tu4pso18" path="res://Player/player.gd" id="1_v6yjc"]
 [ext_resource type="Texture2D" uid="uid://me2b32d0uj16" path="res://Player/Player.png" id="2_2kbr6"]
-[ext_resource type="Resource" uid="uid://bwv3dsew20e5h" path="res://Inventory/Player_Inventory_Data.tres" id="2_btcbx"]
+[ext_resource type="Resource" uid="uid://bwv3dsew20e5h" path="res://Player/Player_Inventory_Data.tres" id="2_btcbx"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_v6yjc")

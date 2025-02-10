@@ -1,11 +1,9 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://diypkjkbko5nh"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://diypkjkbko5nh"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_0ktwm"]
-[ext_resource type="Texture2D" uid="uid://ddec2fl8yi5vr" path="res://General Assets/icon.svg" id="2_uefoy"]
 
 [resource]
 script = ExtResource("1_0ktwm")
 name = &"Defult"
-texture = ExtResource("2_uefoy")
 can_combine_with_item = true
 metadata/_custom_type_script = ExtResource("1_0ktwm")

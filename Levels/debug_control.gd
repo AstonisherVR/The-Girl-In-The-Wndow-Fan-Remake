@@ -5,12 +5,24 @@ const player_inventory = preload("uid://bwv3dsew20e5h")
 @onready var selected_item_label: Label = $"Current Selected Item"
 @onready var player_inventory_data: Label = $"Player Inventory Data"
 
-func _input(event: InputEvent) -> void:
+func _ready() -> void:
 	if OS.is_debug_build():
-		if !inventory_ui.currently_selected_ui_item:
+		player_inventory.items_updated.connect(updt_dbg)
+
+func updt_dbg() -> void:
+	var inv_text: String = ""
+	for item in player_inventory.item_data_list:
+		if !item:
+			inv_text += "<null>, "
+			continue
+		inv_text += item.name + ", "
+	player_inventory_data.text = inv_text
+
+func _input(_event: InputEvent) -> void:
+	if OS.is_debug_build():
+		if inventory_ui.currently_selected_ui_item:
+			var ui_sel_it := inventory_ui.currently_selected_ui_item
+			var itm_name: String = ui_sel_it.item_data.name
+			selected_item_label.text = "Selected Item "+ itm_name
+		else:
 			selected_item_label.text = "No Item Selected"
-			return
-		var ui_sel_it := inventory_ui.currently_selected_ui_item
-		var itm_name: String = ui_sel_it.item_data.name
-		selected_item_label.text = "Selected Item "+ itm_name
-		player_inventory_data.text = str(player_inventory.item_data_list)

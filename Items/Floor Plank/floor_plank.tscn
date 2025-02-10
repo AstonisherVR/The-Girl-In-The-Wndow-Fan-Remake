@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6viqcawdsg8a"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_0lpo4"]
+[ext_resource type="Resource" uid="uid://d11mf7fctn1fx" path="res://Items/Floor Plank/floor_plank.tres" id="2_5s084"]
+[ext_resource type="Texture2D" uid="uid://di7q5kgpfsosm" path="res://General Assets/Placeholder Texture Red.png" id="3_aajic"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5s084"]
+resource_local_to_scene = true
+size = Vector3(1.1, 0.05, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpiwn"]
+albedo_color = Color(0.19, 0.0285, 0, 1)
+albedo_texture = ExtResource("3_aajic")
+
+[sub_resource type="BoxMesh" id="BoxMesh_aajic"]
+resource_local_to_scene = true
+size = Vector3(1, 0.05, 1)
+
+[node name="Floor Plank" instance=ExtResource("1_0lpo4")]
+item_data = ExtResource("2_5s084")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_5s084")
+
+[node name="MeshInstance3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_tpiwn")
+mesh = SubResource("BoxMesh_aajic")

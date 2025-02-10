@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://opuajfwxn6jf"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_kmg2i"]
+[ext_resource type="Texture2D" uid="uid://dsybwyfvs0oku" path="res://General Assets/Placeholder Texture White.png" id="2_0s5o6"]
+[ext_resource type="Resource" uid="uid://bxqrrlby66th7" path="res://Items/Ripped Paper/ripped_paper.tres" id="2_ouh08"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0s5o6"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.075)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ouh08"]
+shading_mode = 0
+albedo_color = Color(0.87451, 1, 1, 1)
+albedo_texture = ExtResource("2_0s5o6")
+heightmap_enabled = true
+heightmap_scale = -16.0
+refraction_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ouh08"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.005)
+
+[node name="Ripped Paper" instance=ExtResource("1_kmg2i")]
+item_data = ExtResource("2_ouh08")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_0s5o6")
+
+[node name="MeshInstance3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_ouh08")
+mesh = SubResource("BoxMesh_ouh08")

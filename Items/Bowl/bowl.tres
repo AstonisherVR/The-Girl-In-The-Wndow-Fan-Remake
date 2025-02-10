@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://dw5d8vxubrg6k"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_trvyg"]
+
+[resource]
+script = ExtResource("1_trvyg")
+name = &"Bowl"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_trvyg")

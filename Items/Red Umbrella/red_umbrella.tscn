@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://drluriy1fmm64"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_oi6ws"]
+[ext_resource type="Script" uid="uid://dk1drbyf5wors" path="res://Items/Red Umbrella/red_umbrella.gd" id="2_clgtg"]
+[ext_resource type="Resource" uid="uid://dywrgv2i3tq04" path="res://Items/Red Umbrella/red_umbrella.tres" id="3_fgvt3"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_clgtg"]
+radius = 0.275
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_clgtg"]
+top_radius = 0.25
+bottom_radius = 0.1
+radial_segments = 16
+rings = 2
+
+[node name="Red Umbrella" instance=ExtResource("1_oi6ws")]
+script = ExtResource("2_clgtg")
+item_data = ExtResource("3_fgvt3")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CylinderShape3D_clgtg")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CylinderMesh_clgtg")

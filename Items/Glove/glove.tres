@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cfcvr088jlobq"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_qi154"]
+
+[resource]
+script = ExtResource("1_qi154")
+name = &"Glove"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_qi154")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://qtvc6lspe8i7"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_1dxeq"]
+[ext_resource type="Resource" uid="uid://b2npre83lx064" path="res://Items/Plastic Handle/plastic_handle.tres" id="2_say1m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_say1m"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.5, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_o4wu5"]
+resource_local_to_scene = true
+size = Vector3(0.1, 0.5, 0.1)
+
+[node name="Plastic Handle" instance=ExtResource("1_1dxeq")]
+item_data = ExtResource("2_say1m")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_say1m")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_o4wu5")

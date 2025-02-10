@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://eglldma6b3av"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_rdt7g"]
+[ext_resource type="Resource" uid="uid://qjestkaf0ux4" path="res://Items/Candle/candle.tres" id="2_c6rel"]
+[ext_resource type="Texture2D" uid="uid://di7q5kgpfsosm" path="res://General Assets/Placeholder Texture Red.png" id="3_qtvd5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6rel"]
+resource_local_to_scene = true
+size = Vector3(0.25, 0.25, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dd2hg"]
+albedo_color = Color(0.163575, 0.1485, 0.45, 1)
+albedo_texture = ExtResource("3_qtvd5")
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtvd5"]
+resource_local_to_scene = true
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="Candle" instance=ExtResource("1_rdt7g")]
+item_data = ExtResource("2_c6rel")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_c6rel")
+
+[node name="MeshInstance3D" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_dd2hg")
+mesh = SubResource("BoxMesh_qtvd5")

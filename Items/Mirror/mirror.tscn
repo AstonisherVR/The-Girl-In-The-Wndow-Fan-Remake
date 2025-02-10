@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce6oy1vuayrw3"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_igdqt"]
+[ext_resource type="Resource" uid="uid://bthm7j8xmfuek" path="res://Items/Mirror/mirror.tres" id="2_gg56v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gg56v"]
+resource_local_to_scene = true
+size = Vector3(0.15, 0.3, 0.15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_atyjh"]
+resource_local_to_scene = true
+size = Vector3(0.12, 0.32, 0.12)
+
+[node name="Mirror" instance=ExtResource("1_igdqt")]
+item_data = ExtResource("2_gg56v")
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_gg56v")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_atyjh")

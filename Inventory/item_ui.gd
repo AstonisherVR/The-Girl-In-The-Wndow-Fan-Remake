@@ -10,4 +10,4 @@ func _init() -> void:
 
 ## Matches its texture to the item data
 func update_ui_item() -> void:
-	texture = item_data.texture if item_data else null
+	texture = item_data.ui_texture if item_data else null

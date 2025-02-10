@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ber60br1lw4i4"]
+
+[ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_qdunf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_87qd8"]
+resource_local_to_scene = true
+size = Vector3(1.1, 1.1, 1.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w34sb"]
+resource_local_to_scene = true
+
+[node name="Pipe Key" instance=ExtResource("1_qdunf")]
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_87qd8")
+
+[node name="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("BoxMesh_w34sb")

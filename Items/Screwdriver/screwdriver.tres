@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://c0mhor3opjw4u"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_l8n4b"]
+
+[resource]
+script = ExtResource("1_l8n4b")
+name = &"Screwdriver"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_l8n4b")

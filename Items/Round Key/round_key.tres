@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://3tmp1k1avo0r"]
+
+[ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_h7ikn"]
+
+[resource]
+script = ExtResource("1_h7ikn")
+name = &"Round Key"
+can_combine_with_item = false
+metadata/_custom_type_script = ExtResource("1_h7ikn")

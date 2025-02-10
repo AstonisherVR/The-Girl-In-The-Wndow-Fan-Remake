@@ -54,9 +54,8 @@ func combine_items(item_1: ItemResource, item_2: ItemResource) -> void:
 	elif POSSIBLE_COMBINATIONS.has(combo_key2):
 		result_path = POSSIBLE_COMBINATIONS[combo_key2]
 	else:
-		push_error("These items can combine but this particular combo, for some reason isn't valid!?")
-		return  # No valid combination found
-   # Load the resulting item data
+		return  # These items can combine but, No valid combination found
+	# Load the resulting item data
 	var combined_item_data: ItemResource = load(result_path) as ItemResource
 	# Find the indexes if the items
 	var index_of_item_1: int = item_data_list.find(item_1)
