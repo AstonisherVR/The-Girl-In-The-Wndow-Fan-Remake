@@ -1,28 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://vxivrxmu1env"]
+[gd_scene load_steps=4 format=3 uid="uid://vxivrxmu1env"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_pg8mt"]
-[ext_resource type="Resource" uid="uid://dw5d8vxubrg6k" path="res://Items/Bowl/bowl.tres" id="2_qn5nb"]
-[ext_resource type="Texture2D" uid="uid://di7q5kgpfsosm" path="res://General Assets/Placeholder Texture Red.png" id="3_qn5nb"]
+[ext_resource type="Resource" uid="uid://dw5d8vxubrg6k" path="res://Items/Bowl/bowl_data.tres" id="2_qn5nb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pg8mt"]
-size = Vector3(1, 0.45, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lpe36"]
-albedo_color = Color(0.22, 0.128333, 0, 1)
-albedo_texture = ExtResource("3_qn5nb")
-
-[sub_resource type="TorusMesh" id="TorusMesh_pg8mt"]
-inner_radius = 0.05
-outer_radius = 0.5
-rings = 8
-ring_segments = 8
+size = Vector3(0.24, 0.1, 0.255)
 
 [node name="Bowl" instance=ExtResource("1_pg8mt")]
 item_data = ExtResource("2_qn5nb")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_pg8mt")
-
-[node name="MeshInstance3D" parent="." index="1"]
-material_override = SubResource("StandardMaterial3D_lpe36")
-mesh = SubResource("TorusMesh_pg8mt")

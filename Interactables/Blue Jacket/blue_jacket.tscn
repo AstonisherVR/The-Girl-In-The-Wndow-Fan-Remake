@@ -14,9 +14,8 @@ albedo_texture = ExtResource("2_jdsbr")
 
 [sub_resource type="TextMesh" id="TextMesh_hoo1f"]
 text = "T"
-pixel_size = 0.1
-curve_step = 10.0
-depth = 0.1
+pixel_size = 0.075
+curve_step = 5.0
 
 [node name="Blue Jacket" instance=ExtResource("1_p4776")]
 

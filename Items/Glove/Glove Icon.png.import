@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6mkxb8xgn77w"
-path="res://.godot/imported/Sprite.png-1ec64d40da81c698ea8a5d7446a7070f.ctex"
+uid="uid://dkdiy2xo1gop"
+path="res://.godot/imported/Glove Icon.png-d09f85119499b1ced4b19c9ac1ab03ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Candle/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-1ec64d40da81c698ea8a5d7446a7070f.ctex"]
+source_file="res://Items/Glove/Glove Icon.png"
+dest_files=["res://.godot/imported/Glove Icon.png-d09f85119499b1ced4b19c9ac1ab03ec.ctex"]
 
 [params]
 

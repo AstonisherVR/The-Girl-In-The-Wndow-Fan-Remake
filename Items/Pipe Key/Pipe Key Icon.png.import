@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be1g82f32o1c0"
-path="res://.godot/imported/Sprite.png-634a04fc4e848a01a82e513f50afbf6c.ctex"
+uid="uid://uekosm7604s"
+path="res://.godot/imported/Pipe Key Icon.png-8f61e76e6fcd39c0518027104b0f298c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Book/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-634a04fc4e848a01a82e513f50afbf6c.ctex"]
+source_file="res://Items/Pipe Key/Pipe Key Icon.png"
+dest_files=["res://.godot/imported/Pipe Key Icon.png-8f61e76e6fcd39c0518027104b0f298c.ctex"]
 
 [params]
 

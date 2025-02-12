@@ -1,15 +1,12 @@
 [gd_scene load_steps=5 format=3 uid="uid://dlcrba7b5jsb7"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_ngwhw"]
-[ext_resource type="Resource" uid="uid://bddtks7tqxhi0" path="res://Items/Cassette Tape/cassette_tape.tres" id="2_ngwhw"]
+[ext_resource type="Resource" uid="uid://bddtks7tqxhi0" path="res://Items/Cassette Tape/cassette_tape_data.tres" id="2_ngwhw"]
+[ext_resource type="PackedScene" uid="uid://duxjcg41fp2cy" path="res://Items/Cassette Tape/Cassette Tape Model.blend" id="3_ymlcq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_k4hlq"]
 resource_local_to_scene = true
 size = Vector3(0.225, 0.1, 0.505)
-
-[sub_resource type="BoxMesh" id="BoxMesh_qibly"]
-resource_local_to_scene = true
-size = Vector3(0.2, 0.05, 0.5)
 
 [node name="Cassette Tape" instance=ExtResource("1_ngwhw")]
 item_data = ExtResource("2_ngwhw")
@@ -17,5 +14,4 @@ item_data = ExtResource("2_ngwhw")
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_k4hlq")
 
-[node name="MeshInstance3D" parent="." index="1"]
-mesh = SubResource("BoxMesh_qibly")
+[node name="Cassette Tape Model" parent="." index="1" instance=ExtResource("3_ymlcq")]

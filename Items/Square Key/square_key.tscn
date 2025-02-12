@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dv8qxaluuo0qk"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_o0xkx"]
-[ext_resource type="Resource" uid="uid://cpgkdvsmmflt4" path="res://Items/Square Key/square_key.tres" id="2_xg0mi"]
+[ext_resource type="Resource" uid="uid://cpgkdvsmmflt4" path="res://Items/Square Key/square_key_data.tres" id="2_xg0mi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xg0mi"]
 resource_local_to_scene = true

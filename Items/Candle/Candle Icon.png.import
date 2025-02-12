@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2coppip46fjt"
-path="res://.godot/imported/Sprite.png-0ced4966c53129bc3b599474e5181281.ctex"
+uid="uid://clsa5o46f2qog"
+path="res://.godot/imported/Candle Icon.png-3103dbf598dcfeb45f352d77e1ee14fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Items/Hammer/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-0ced4966c53129bc3b599474e5181281.ctex"]
+source_file="res://Items/Candle/Candle Icon.png"
+dest_files=["res://.godot/imported/Candle Icon.png-3103dbf598dcfeb45f352d77e1ee14fb.ctex"]
 
 [params]
 

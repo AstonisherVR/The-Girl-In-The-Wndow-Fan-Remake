@@ -2,23 +2,18 @@
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_oi6ws"]
 [ext_resource type="Script" uid="uid://dk1drbyf5wors" path="res://Items/Red Umbrella/red_umbrella.gd" id="2_clgtg"]
-[ext_resource type="Resource" uid="uid://dywrgv2i3tq04" path="res://Items/Red Umbrella/red_umbrella.tres" id="3_fgvt3"]
+[ext_resource type="Resource" uid="uid://dywrgv2i3tq04" path="res://Items/Red Umbrella/red_umbrella_data.tres" id="3_fgvt3"]
+[ext_resource type="PackedScene" uid="uid://2sdq6dyg05k8" path="res://Items/Red Umbrella/Red Umbrella Model.blend" id="4_wyt1t"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_clgtg"]
-radius = 0.275
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_clgtg"]
-top_radius = 0.25
-bottom_radius = 0.1
-radial_segments = 16
-rings = 2
+[sub_resource type="BoxShape3D" id="BoxShape3D_wyt1t"]
+size = Vector3(0.125, 0.825, 0.125)
 
 [node name="Red Umbrella" instance=ExtResource("1_oi6ws")]
 script = ExtResource("2_clgtg")
 item_data = ExtResource("3_fgvt3")
 
 [node name="CollisionShape3D" parent="." index="0"]
-shape = SubResource("CylinderShape3D_clgtg")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41, 0)
+shape = SubResource("BoxShape3D_wyt1t")
 
-[node name="MeshInstance3D" parent="." index="1"]
-mesh = SubResource("CylinderMesh_clgtg")
+[node name="Red Umbrella Model" parent="." index="1" instance=ExtResource("4_wyt1t")]
