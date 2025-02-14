@@ -20,7 +20,7 @@ const POSSIBLE_COMBINATIONS: Dictionary[StringName, StringName] = {
 #@onready var possible_item_combinations: ItemCombinations = preload("res://path_to/ItemCombinations.gd")
 
 func insert_item_data_at_first_empty_slot(collected_item: ItemResource) -> void:
-	for index in range(item_data_list.size()):
+	for index: int in range(item_data_list.size()):
 		#print(item_data_list)
 		# If it's empty, add the item data
 		if !item_data_list[index]:

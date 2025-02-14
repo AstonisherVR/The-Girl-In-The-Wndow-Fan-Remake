@@ -1,13 +1,16 @@
 extends Panel
 
-const player_inventory = preload("uid://bwv3dsew20e5h")
+const player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
 @onready var inventory_ui: InventoryUI = $"../Inventory UI"
 @onready var selected_item_label: Label = $"Current Selected Item"
 @onready var player_inventory_data: Label = $"Player Inventory Data"
 
 func _ready() -> void:
 	if OS.is_debug_build():
+		updt_dbg()
 		player_inventory.items_updated.connect(updt_dbg)
+	else:
+		queue_free()
 
 func updt_dbg() -> void:
 	var inv_text: String = ""
@@ -15,6 +18,7 @@ func updt_dbg() -> void:
 		if !item:
 			inv_text += "<null>, "
 			continue
+		print(item.get_class())
 		inv_text += item.name + ", "
 	player_inventory_data.text = inv_text
 

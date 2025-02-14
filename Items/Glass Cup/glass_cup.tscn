@@ -1,11 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://v6jmblc3si34"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_ydxjt"]
-[ext_resource type="Resource" uid="uid://bn2pfgi651ci7" path="res://Items/Glass Cup/glass_cup.tres" id="2_n7h4i"]
+[ext_resource type="Resource" uid="uid://bn2pfgi651ci7" path="res://Items/Glass Cup/glass_cup_data.tres" id="2_n7h4i"]
+[ext_resource type="PackedScene" uid="uid://cll1bdjhgayxp" path="res://Items/Glass Cup/Glass Cup Model.blend" id="3_n7h4i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ydxjt"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ydxjt"]
 
 [node name="Glass Cup" instance=ExtResource("1_ydxjt")]
 item_data = ExtResource("2_n7h4i")
@@ -13,5 +12,4 @@ item_data = ExtResource("2_n7h4i")
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("CapsuleShape3D_ydxjt")
 
-[node name="MeshInstance3D" parent="." index="1"]
-mesh = SubResource("CapsuleMesh_ydxjt")
+[node name="Glass Cup Model" parent="." index="1" instance=ExtResource("3_n7h4i")]
