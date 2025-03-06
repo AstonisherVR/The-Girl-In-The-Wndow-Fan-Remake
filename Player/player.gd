@@ -1,20 +1,8 @@
 extends Node3D
 
-var close_up_state_positions: Dictionary[String, Vector3] = {
-	"CENTER_OF_ROOM": Vector3.ZERO,
-	"COAT_RACK": Vector3(-2, 1, -2),
-	"LIGHT_SWITCH": Vector3(0, 1, -2),
-	"FLOOR_PLANK": Vector3(1, 0, -1),
-	}
-
-#@export var CloseUpStates: Array[String] = ["CENTER_OF_ROOM", "COAT_RACK", "LIGHT_SWITCH", "FLOOR_PLANK", "DRAWER",
-				#"PIPE", "TV", "VCR", "POWER_CABLE", "UPER_SHELF_CABINET", "LOWER_SHELF_CABINET", "BOOKS",
-				#"NUMBERS_PUZZLE_BOX", "SYMBOLS_PUZZLE_CABINET", "FIGURE_PUZZLE_CABINET", "VAMPIRE", "MOUSE",
-				#"PLANT_WITH_STONE", "COUCH", "FAKE_PLUG", "NEWS", "TABLE", "WINDOW", "DRAWER_WITH_PHOTO"]
-
 @onready var inventory: InventoryResource = preload("res://Player/Player_Inventory_Data.tres")
 @onready var go_back_button: TextureButton = %"Go Back Button"
-@onready var close_up_areas: Node3D = %"Close Up Areas"
+@onready var close_up_areas: Node = %"Close Up Areas"
 @export var rotation_duration: float = 0.2	# Seconds
 
 var current_rotation: float
@@ -26,8 +14,7 @@ func _ready() -> void:
 	connect_close_up_areas()
 
 func connect_close_up_areas() -> void:
-	for area: InteractArea in close_up_areas.get_children():
-		area.player_close_up.connect(player_look_at)
+	for area: CloseUpArea in close_up_areas.get_children(): area.player_close_up.connect(player_look_at)
 
 func _input(event: InputEvent) -> void:
 	if !can_turn: return	# No need to check the turn dir if the player is already turning
@@ -41,6 +28,22 @@ func turn(turn_dir: int) -> void:
 	tween.tween_property(self, "rotation:y", current_rotation, rotation_duration)
 	await tween.finished
 	can_turn = true
+
+var close_up_state_positions: Dictionary[String, Vector3] = {
+	"CENTER_OF_ROOM": Vector3.ZERO, "COAT_RACK": Vector3(-2, 1, -2),
+	"LIGHT_SWITCH": Vector3(0, 1, -2), "FLOOR_PLANK": Vector3(-3, -0.5, -1),
+	"DRAWER": Vector3.ONE, "PIPE": Vector3.ONE,
+	"TV": Vector3.ONE, "VCR": Vector3.ONE,
+	"POWER_CABLE": Vector3.ZERO, "UPER_SHELF_CABINET": Vector3.ONE,
+	"LOWER_SHELF_CABINET": Vector3.ONE, "BOOKS": Vector3.ONE,
+	"NUMBERS_PUZZLE_BOX": Vector3.ZERO, "SYMBOLS_PUZZLE_CABINET": Vector3.ONE,
+	"FIGURE_PUZZLE_CABINET": Vector3.ONE, "VAMPIRE": Vector3.ONE,
+	"MOUSE": Vector3.ZERO, "PLANT_WITH_STONE": Vector3.ONE,
+	"COUCH": Vector3.ONE, "FAKE_PLUG": Vector3.ONE,
+	"NEWS": Vector3.ZERO, "TABLE": Vector3.ONE,
+	"WINDOW": Vector3.ONE, "DRAWER_WITH_PHOTO": Vector3.ONE,
+
+	}
 
 func player_look_at(state_to_be: String) -> void:
 	if not(state_to_be in close_up_state_positions):

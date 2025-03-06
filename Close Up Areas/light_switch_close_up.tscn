@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://78b0477uqft"]
+
+[ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_qbut7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_amqxl"]
+resource_local_to_scene = true
+size = Vector3(0.5, 0.5, 0.25)
+
+[node name="Light Switch Close Up" instance=ExtResource("1_qbut7")]
+my_close_up_name = "LIGHT_SWITCH"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_amqxl")
