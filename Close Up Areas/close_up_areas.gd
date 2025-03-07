@@ -1,7 +1,5 @@
 class_name CloseUpAreasManager extends Node
 
-signal player_interacting
-
 var close_up_areas: Array[Node]
 
 @onready var look_sides: Dictionary = {
@@ -33,7 +31,6 @@ func update_active_side(current_side: StringName = player.current_look_dir_name)
 	if not look_sides.has(current_side): return
 	disable_collisions()
 	enable_collisions((look_sides[current_side]) as Node)
-	player_interacting.emit()
 
 func disable_collisions() -> void:
 	for close_up_area: CloseUpArea in close_up_areas:

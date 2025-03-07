@@ -1,6 +1,7 @@
 class_name Player extends Node3D
 
 signal looking_dir(side_name: StringName)
+signal player_interacting
 
 @onready var inventory: InventoryResource = preload("res://Player/Player_Inventory_Data.tres")
 @onready var go_back_button: TextureButton = %"Go Back Button"
@@ -33,6 +34,7 @@ func turn(turn_dir: int) -> void:
 
 func player_look_at(state_to_be: Vector3) -> void:
 	previous_position = position
+	player_interacting.emit()
 	var tween: Tween = create_my_tween()
 	#tween.set_parallel()
 	#tween.tween_property(self, "rotation_degrees.y", 0.1, move_wait_time)
