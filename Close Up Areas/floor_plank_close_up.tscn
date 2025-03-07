@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_llva4"]
 resource_local_to_scene = true
-size = Vector3(1, 0.5, 1)
+size = Vector3(1, 0.2, 1)
 
 [node name="Floor Plank Close Up" instance=ExtResource("1_54m46")]
 my_close_up_name = "FLOOR_PLANK"

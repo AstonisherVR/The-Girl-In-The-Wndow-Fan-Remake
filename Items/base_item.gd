@@ -1,9 +1,10 @@
 class_name BaseItem extends Area3D
 
-var mouse_in: bool = false
+@onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
 
 @export var item_data: ItemResource
-@onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
+
+var mouse_in: bool = false
 
 func _ready() -> void:
 	if item_data: item_data.name = name
