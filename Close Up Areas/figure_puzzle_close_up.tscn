@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://byvuy8hnx1j41"]
+
+[ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_37hd5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_42buj"]
+size = Vector3(1.5, 1.5, 1)
+
+[node name="Figure Puzzle Close Up" instance=ExtResource("1_37hd5")]
+my_close_up_name = "FIGURE_PUZZLE_CABINET"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_42buj")

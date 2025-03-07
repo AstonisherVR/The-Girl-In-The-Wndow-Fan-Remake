@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d062an6tt5tey"]
+
+[ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_oper3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hn1eg"]
+resource_local_to_scene = true
+size = Vector3(1.5, 1.5, 1)
+
+[node name="TV Close Up" instance=ExtResource("1_oper3")]
+my_close_up_name = "TV"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_hn1eg")

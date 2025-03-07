@@ -159,7 +159,6 @@ common/max_physics_steps_per_frame=4
 
 [rendering]
 
-renderer/rendering_method="gl_compatibility"
 viewport/hdr_2d=true
 occlusion_culling/occlusion_rays_per_thread=24
 environment/defaults/default_clear_color=Color(0.230315, 0.230315, 0.230315, 1)

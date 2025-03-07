@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx3ryct1fikhc"]
+
+[ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_3nfta"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crvo8"]
+resource_local_to_scene = true
+size = Vector3(1.5, 1.5, 1)
+
+[node name="Uper Shelf Close Up" instance=ExtResource("1_3nfta")]
+my_close_up_name = "UPER_SHELF_CABINET"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_crvo8")

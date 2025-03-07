@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d122vghcnyws2"]
+
+[ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_fvld4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dw5a3"]
+resource_local_to_scene = true
+size = Vector3(1.5, 1.5, 1)
+
+[node name="Plant Close Up" instance=ExtResource("1_fvld4")]
+my_close_up_name = "PLANT_WITH_STONE"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("BoxShape3D_dw5a3")

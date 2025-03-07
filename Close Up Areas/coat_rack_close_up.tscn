@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_81pr1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_81pr1"]
-resource_local_to_scene = true
-size = Vector3(1.75, 1.75, 0.25)
+size = Vector3(1.2, 1.5, 0.25)
 
 [node name="Coat Rack Close Up" instance=ExtResource("1_81pr1")]
 my_close_up_name = "COAT_RACK"
