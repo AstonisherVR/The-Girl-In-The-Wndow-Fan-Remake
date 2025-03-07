@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btsrhibau4s5"
-path="res://.godot/imported/Sprite.png-b3294960034eef497445e78576f8852a.ctex"
+uid="uid://dx3p17uc0kfv5"
+path="res://.godot/imported/Sprite.png-22c70731af05acbf8d08a53dd5d10bc0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General Assets/Fishing Rod/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-b3294960034eef497445e78576f8852a.ctex"]
+source_file="res://General Assets/Placeholders/Fork/Sprite.png"
+dest_files=["res://.godot/imported/Sprite.png-22c70731af05acbf8d08a53dd5d10bc0.ctex"]
 
 [params]
 

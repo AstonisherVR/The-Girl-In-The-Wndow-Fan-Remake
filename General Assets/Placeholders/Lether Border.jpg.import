@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceg2d68vjpi3r"
-path="res://.godot/imported/Sprite.png-b4667785f8c99baabe0a5e681fb4a465.ctex"
+uid="uid://bm46xgpl3jlb4"
+path="res://.godot/imported/Lether Border.jpg-3432348485a560c48cd5b1c81e3774e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General Assets/Axe/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-b4667785f8c99baabe0a5e681fb4a465.ctex"]
+source_file="res://General Assets/Placeholders/Lether Border.jpg"
+dest_files=["res://.godot/imported/Lether Border.jpg-3432348485a560c48cd5b1c81e3774e2.ctex"]
 
 [params]
 

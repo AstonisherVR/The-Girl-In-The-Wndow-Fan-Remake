@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bq1lxfqy0bso1"]
 
-[ext_resource type="Material" uid="uid://dw5n0qg0yonu1" path="res://General Assets/White Grid.tres" id="1_awabc"]
+[ext_resource type="Material" uid="uid://dw5n0qg0yonu1" path="res://General Assets/Placeholders/White Grid.tres" id="1_awabc"]
 
 [node name="House Prototype" type="CSGCombiner3D"]
 

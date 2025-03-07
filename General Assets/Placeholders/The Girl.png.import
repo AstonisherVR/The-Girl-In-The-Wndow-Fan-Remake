@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3758kqxo1iet"
-path="res://.godot/imported/Sprite.png-a81bdb3b8544cfb16132c216a9077719.ctex"
+uid="uid://ctgxnftgtobsx"
+path="res://.godot/imported/The Girl.png-3818f33740447ad726f2411a2061f372.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://General Assets/BigSword/Sprite.png"
-dest_files=["res://.godot/imported/Sprite.png-a81bdb3b8544cfb16132c216a9077719.ctex"]
+source_file="res://General Assets/Placeholders/The Girl.png"
+dest_files=["res://.godot/imported/The Girl.png-3818f33740447ad726f2411a2061f372.ctex"]
 
 [params]
 

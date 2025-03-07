@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://opuajfwxn6jf"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_kmg2i"]
-[ext_resource type="Texture2D" uid="uid://dsybwyfvs0oku" path="res://General Assets/Placeholder Texture White.png" id="2_0s5o6"]
-[ext_resource type="Resource" uid="uid://bxqrrlby66th7" path="res://Items/Ripped Paper/ripped_paper.tres" id="2_ouh08"]
+[ext_resource type="Texture2D" uid="uid://dsybwyfvs0oku" path="res://General Assets/Placeholders/Placeholder Texture White.png" id="2_0s5o6"]
+[ext_resource type="Resource" uid="uid://bxqrrlby66th7" path="res://Items/Ripped Paper/ripped_paper_data.tres" id="2_ouh08"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0s5o6"]
 resource_local_to_scene = true

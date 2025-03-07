@@ -1,14 +1,14 @@
-[gd_scene load_steps=50 format=3 uid="uid://dvqmup262b7tn"]
+[gd_scene load_steps=51 format=3 uid="uid://dvqmup262b7tn"]
 
 [ext_resource type="PackedScene" uid="uid://d00gvwlu8x1q" path="res://Player/player.tscn" id="1_2fgek"]
 [ext_resource type="PackedScene" uid="uid://dvslyfa3h0y8a" path="res://House/house.tscn" id="1_dybxh"]
 [ext_resource type="PackedScene" uid="uid://bq1lxfqy0bso1" path="res://House/house_prototype.tscn" id="2_pi6ls"]
-[ext_resource type="Script" uid="uid://b3ma20s4qa3jx" path="res://close_up_areas.gd" id="3_sgfi2"]
+[ext_resource type="Script" uid="uid://b3ma20s4qa3jx" path="res://Close Up Areas/close_up_areas.gd" id="3_sgfi2"]
 [ext_resource type="PackedScene" uid="uid://opuajfwxn6jf" path="res://Items/Ripped Paper/ripped_paper.tscn" id="3_v64op"]
 [ext_resource type="PackedScene" uid="uid://drluriy1fmm64" path="res://Items/Red Umbrella/red_umbrella.tscn" id="3_vdof2"]
 [ext_resource type="PackedScene" uid="uid://csoc6fe5v5ykv" path="res://Close Up Areas/coat_rack_close_up.tscn" id="3_wb1ai"]
 [ext_resource type="PackedScene" uid="uid://bvwpenmrck3h1" path="res://Inventory/inventory_ui.tscn" id="4_p8lrm"]
-[ext_resource type="PackedScene" uid="uid://br2q72ep0ogkb" path="res://Interactables/Blue Jacket/blue_jacket.tscn" id="4_vdof2"]
+[ext_resource type="PackedScene" uid="uid://b3lcx01auwiua" path="res://Static Objects/blue_jacket.tscn" id="4_vdof2"]
 [ext_resource type="PackedScene" uid="uid://78b0477uqft" path="res://Close Up Areas/light_switch_close_up.tscn" id="5_hscjs"]
 [ext_resource type="PackedScene" uid="uid://bfv3e00ixmutt" path="res://Close Up Areas/floor_plank_close_up.tscn" id="6_5d5kx"]
 [ext_resource type="PackedScene" uid="uid://b1lup167chsuj" path="res://Close Up Areas/drawer_close_up.tscn" id="7_h7sml"]
@@ -48,17 +48,15 @@
 [ext_resource type="Script" uid="uid://cj3x6305o532w" path="res://go_back_button.gd" id="24_5ybiy"]
 [ext_resource type="PackedScene" uid="uid://cmtymooohl20x" path="res://Close Up Areas/vcr_close_up.tscn" id="24_08ajq"]
 [ext_resource type="PackedScene" uid="uid://dr468mwn6enwk" path="res://Close Up Areas/window_close_up.tscn" id="25_007jf"]
+[ext_resource type="Script" uid="uid://5g3e1oxluwub" path="res://Items/pick_up_items_manager.gd" id="25_t4laf"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wb1ai"]
 size = Vector2(124, 124)
 
 [node name="Main Scene" type="Node3D"]
 
-[node name="Player" parent="." instance=ExtResource("1_2fgek")]
-unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00417995, 0)
-
 [node name="Close Up Areas Manager" type="Node" parent="."]
+unique_name_in_owner = true
 script = ExtResource("3_sgfi2")
 
 [node name="Front Areas" type="Node" parent="Close Up Areas Manager"]
@@ -83,144 +81,139 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.68175, 0.591406, -3.08881)
 
 [node name="TV Close Up" parent="Close Up Areas Manager/Right Areas" instance=ExtResource("21_hysvv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.555511, 0, 0.61114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.14621, 0, 0.61114)
 
 [node name="VCR Close Up" parent="Close Up Areas Manager/Right Areas" instance=ExtResource("24_08ajq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 0.54346)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10989, 0, 0.54346)
 
 [node name="Power Cable Close Up" parent="Close Up Areas Manager/Right Areas" instance=ExtResource("18_mv4ya")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.985268, 0, 1.41022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42635, 0, 1.41022)
 
 [node name="Uper Shelf Close Up" parent="Close Up Areas Manager/Right Areas" instance=ExtResource("22_if8d2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27123, 0, 1.41022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.37375, 0, 1.41022)
 
 [node name="Lower Shelf Close Up" parent="Close Up Areas Manager/Right Areas" instance=ExtResource("12_ojphd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, -0.443358)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29245, 0, -0.443358)
 
 [node name="Back Areas" type="Node" parent="Close Up Areas Manager"]
 unique_name_in_owner = true
 
 [node name="Books Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("14_fpg2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161629, 0, 1.77048)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161629, 0, 3.47877)
 
 [node name="Num Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("15_fbhtv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.76399, 0, 0.404897)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.838518, 0, 3.72782)
 
 [node name="Symb Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("19_f3kes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 0.579667)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.933066, 0, 3.491)
 
 [node name="Figure Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("11_nlx2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.278403, 0, 2.59504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09243, 0, 2.894)
 
 [node name="Vampire Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("23_prlup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 1.41022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 3.69052)
 
 [node name="Mouse Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("13_sohhj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.33034, 0, 2.83154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97234, 0, 3.36824)
 
 [node name="Plant Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("17_k6o2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74263, 0, 1.41022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46539, 0, 3.18718)
 
 [node name="Left Areas" type="Node" parent="Close Up Areas Manager"]
 unique_name_in_owner = true
 
 [node name="Couch Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("8_86cmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 0.815533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99463, 0, 0.815533)
 
 [node name="Fake Plug Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("10_t4laf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69025, 0, 2.06261)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67281, 0, 2.06261)
 
 [node name="News Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("14_7cjcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 2.1383)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57468, 0, -0.342263)
 
 [node name="Table Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("20_68fbq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 1.41022)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59079, 0, -0.989806)
 
 [node name="Window Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("25_007jf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37377, 0, 1.86544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36185, 0, 1.43054)
 
 [node name="Drawer w Photo Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("9_fpg2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.86544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.78527, 0, 1.86544)
 
-[node name="Interactable Items" type="Node" parent="."]
+[node name="Pick Up Items Manager" type="Node" parent="."]
+script = ExtResource("25_t4laf")
 
-[node name="Red Umbrella" parent="Interactable Items" instance=ExtResource("3_vdof2")]
+[node name="Red Umbrella" parent="Pick Up Items Manager" instance=ExtResource("3_vdof2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.80659, 1.76628, -3.56934)
-visible = false
 
-[node name="Blue Jacket" parent="Interactable Items" instance=ExtResource("4_vdof2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06633, 2.61333, -3.64838)
-visible = false
-item_name_to_interact_with = &"Key"
-
-[node name="Ripped Paper" parent="Interactable Items" instance=ExtResource("3_v64op")]
+[node name="Ripped Paper" parent="Pick Up Items Manager" instance=ExtResource("3_v64op")]
 transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -2.41093, 2.54523, -3.65168)
-visible = false
 
-[node name="Floor Plank" parent="Interactable Items" instance=ExtResource("8_mc1i1")]
+[node name="Floor Plank" parent="Pick Up Items Manager" instance=ExtResource("8_mc1i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67875, 0, -3.17982)
-visible = false
 
-[node name="Candle" parent="Interactable Items" instance=ExtResource("9_mc1i1")]
+[node name="Candle" parent="Pick Up Items Manager" instance=ExtResource("9_mc1i1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84664, 1.14556, -2.87345)
-visible = false
 
-[node name="TV Dial" parent="Interactable Items" instance=ExtResource("10_8rkvs")]
+[node name="TV Dial" parent="Pick Up Items Manager" instance=ExtResource("10_8rkvs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20433, 2.40414, -3.02765)
-visible = false
 
-[node name="Pipe Key" parent="Interactable Items" instance=ExtResource("9_nm3d2")]
+[node name="Pipe Key" parent="Pick Up Items Manager" instance=ExtResource("9_nm3d2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88783, 0, -3.20266)
-visible = false
 
-[node name="Plastic Handle" parent="Interactable Items" instance=ExtResource("20_yfwm6")]
+[node name="Plastic Handle" parent="Pick Up Items Manager" instance=ExtResource("20_yfwm6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35688, 0.946342, 0.572803)
-visible = false
 
-[node name="Duct Tape" parent="Interactable Items" instance=ExtResource("9_vdof2")]
+[node name="Duct Tape" parent="Pick Up Items Manager" instance=ExtResource("9_vdof2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.18028, 2.82326, 1.74509)
-visible = false
 
-[node name="Clues Book" parent="Interactable Items" instance=ExtResource("13_kumpi")]
+[node name="Clues Book" parent="Pick Up Items Manager" instance=ExtResource("13_kumpi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93623, 2.69643, 3.55369)
-visible = false
 
-[node name="Matches" parent="Interactable Items" instance=ExtResource("11_h3qna")]
+[node name="Matches" parent="Pick Up Items Manager" instance=ExtResource("11_h3qna")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46531, 1.17328, 3.60608)
-visible = false
 
-[node name="Mirror" parent="Interactable Items" instance=ExtResource("16_v64op")]
+[node name="Mirror" parent="Pick Up Items Manager" instance=ExtResource("16_v64op")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37883, 0.250647, 3.0575)
-visible = false
 
-[node name="Mouse" parent="Interactable Items" instance=ExtResource("13_srusp")]
+[node name="Mouse" parent="Pick Up Items Manager" instance=ExtResource("13_srusp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848846, 0, 2.81766)
-visible = false
 
-[node name="Stone" parent="Interactable Items" instance=ExtResource("15_yfwm6")]
+[node name="Stone" parent="Pick Up Items Manager" instance=ExtResource("15_yfwm6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77369, 0.421203, 3.15768)
-visible = false
 
-[node name="Square Key" parent="Interactable Items" instance=ExtResource("14_wgp5u")]
+[node name="Square Key" parent="Pick Up Items Manager" instance=ExtResource("14_wgp5u")]
 transform = Transform3D(0.969868, 0, -0.243632, 0, 1, 0, 0.243632, 0, 0.969868, -3.54263, 0.424281, 2.54325)
-visible = false
 
-[node name="Cheese Piece" parent="Interactable Items" instance=ExtResource("12_qs7lm")]
+[node name="Cheese Piece" parent="Pick Up Items Manager" instance=ExtResource("12_qs7lm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.30189, 0.83117, 0)
-visible = false
 
-[node name="Cassette Tape" parent="Interactable Items" instance=ExtResource("11_xnfqo")]
+[node name="Cassette Tape" parent="Pick Up Items Manager" instance=ExtResource("11_xnfqo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.27743, 0.726327, -2.54814)
-visible = false
+
+[node name="Static Objects" type="Node" parent="."]
+
+[node name="Blue Jacket" parent="Static Objects" instance=ExtResource("4_vdof2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06633, 2.61333, -3.64838)
+
+[node name="Interactable Objects" type="Node" parent="."]
+
+[node name="Base Interactable" parent="Interactable Objects" instance=ExtResource("23_rpxjs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71422, 0.476356, -2.99125)
+
+[node name="Player" parent="." instance=ExtResource("1_2fgek")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00417995, 0)
 
 [node name="House" parent="." instance=ExtResource("1_dybxh")]
 unique_name_in_owner = true
 metadata/_edit_lock_ = true
 
-[node name="House Prototype" parent="." instance=ExtResource("2_pi6ls")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-visible = false
-metadata/_edit_lock_ = true
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.30416, 0)
+shadow_enabled = true
+omni_range = 6.5
+omni_attenuation = 1.1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -306,13 +299,9 @@ texture_focused = SubResource("PlaceholderTexture2D_wb1ai")
 script = ExtResource("24_5ybiy")
 metadata/_edit_use_anchors_ = true
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.30416, 0)
-shadow_enabled = true
-omni_range = 6.5
-omni_attenuation = 1.1
-
-[node name="Base Interactable" parent="." instance=ExtResource("23_rpxjs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71422, 0.476356, -2.99125)
+[node name="House Prototype" parent="." instance=ExtResource("2_pi6ls")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="CanvasLayer/Go Back Button" to="Player" method="_on_go_back_button_pressed"]

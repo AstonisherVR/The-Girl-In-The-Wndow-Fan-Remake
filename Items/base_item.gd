@@ -1,13 +1,16 @@
 class_name BaseItem extends Area3D
 
-@onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
+signal disable_all_items_collision
 
+@onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
+@onready var collision_shape: CollisionShape3D = %CollisionShape3D
 @export var item_data: ItemResource
 
 var mouse_in: bool = false
 
 func _ready() -> void:
 	if item_data: item_data.name = name
+	disable_all_items_collision.emit.call_deferred()
 
 ## When an item gets collected, the inventory data changes directly
 func collect_item() -> void:

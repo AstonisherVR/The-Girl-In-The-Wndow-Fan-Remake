@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3lcx01auwiua"]
+
+[ext_resource type="Texture2D" uid="uid://dsybwyfvs0oku" path="res://General Assets/Placeholders/Placeholder Texture White.png" id="1_vpr01"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mxvh"]
+diffuse_mode = 2
+albedo_color = Color(0, 0.656012, 0.656336, 1)
+albedo_texture = ExtResource("1_vpr01")
+
+[sub_resource type="QuadMesh" id="QuadMesh_w0d3c"]
+
+[node name="Blue Jacket" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_5mxvh")
+mesh = SubResource("QuadMesh_w0d3c")

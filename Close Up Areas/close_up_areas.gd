@@ -1,4 +1,6 @@
-extends Node
+class_name CloseUpAreasManager extends Node
+
+signal player_interacting
 
 var close_up_areas: Array[Node]
 
@@ -13,19 +15,25 @@ var close_up_areas: Array[Node]
 @onready var player: Player = %Player
 
 func _ready() -> void:
-	for look_side: Node in look_sides.values(): close_up_areas.append_array(look_side.get_children())
+	for look_side: Node in look_sides.values():
+		close_up_areas.append_array(look_side.get_children())
 
+	# Connects the signals for all the Close Up Areas
 	for close_up_area: CloseUpArea in close_up_areas:
 		close_up_area.player_close_up.connect(player.player_look_at)
 		close_up_area.disable_collisions.connect(disable_collisions)
 
 	go_back_button.pressed.connect(update_active_side)
 	player.looking_dir.connect(update_active_side)
+
+	# Set initial active side
 	update_active_side(&"FRONT")
 
 func update_active_side(current_side: StringName = player.current_look_dir_name) -> void:
+	if not look_sides.has(current_side): return
 	disable_collisions()
 	enable_collisions((look_sides[current_side]) as Node)
+	player_interacting.emit()
 
 func disable_collisions() -> void:
 	for close_up_area: CloseUpArea in close_up_areas:

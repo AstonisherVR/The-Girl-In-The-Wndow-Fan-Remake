@@ -18,7 +18,7 @@ func updt_dbg() -> void:
 		if !item:
 			inv_text += "<null>, "
 			continue
-		print(item.get_class())
+		#print(item.get_class())
 		inv_text += item.name + ", "
 	player_inventory_data.text = inv_text
 

@@ -1,7 +1,10 @@
 class_name CloseUpArea extends Area3D
+
 signal player_close_up(where_to: Vector3)
 signal disable_collisions
+
 var mouse_in: bool = false
+
 @onready var collision_shape: CollisionShape3D = %CollisionShape3D
 @export_enum("COAT_RACK", "LIGHT_SWITCH", "FLOOR_PLANK", "DRAWER", "PIPE", "TV", "VCR",
 			"POWER_CABLE", "UPER_SHELF_CABINET", "LOWER_SHELF_CABINET", "BOOKS",
@@ -41,9 +44,6 @@ func _input(event: InputEvent) -> void:
 func interact() -> void:
 	player_close_up.emit(close_up_state_positions[my_close_up_name])
 	disable_collisions.emit()
-
-func reset() -> void:
-	collision_shape.disabled = false
 
 func _on_mouse_entered() -> void: mouse_in = true
 
