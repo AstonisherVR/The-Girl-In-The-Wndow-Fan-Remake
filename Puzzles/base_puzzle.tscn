@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://kkwu20rtllhi"]
+[gd_scene load_steps=2 format=3 uid="uid://kkwu20rtllhi"]
+
+[ext_resource type="Script" uid="uid://c6ioc1owu7xce" path="res://Puzzles/base_puzzle.gd" id="1_oetf2"]
 
 [node name="Base Puzzle" type="Node3D"]
+script = ExtResource("1_oetf2")

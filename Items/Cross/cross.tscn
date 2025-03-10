@@ -1,20 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://d0l2f32e4mklh"]
+[gd_scene load_steps=4 format=3 uid="uid://d0l2f32e4mklh"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_sumap"]
-[ext_resource type="Resource" uid="uid://gp5m8ihpsb8q" path="res://Items/Cross/cross.tres" id="2_ho0nm"]
+[ext_resource type="Resource" uid="uid://gp5m8ihpsb8q" path="res://Items/Cross/cross_data.tres" id="2_ho0nm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ho0nm"]
 resource_local_to_scene = true
 size = Vector3(1.1, 1.1, 1.1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_c2di7"]
-resource_local_to_scene = true
 
 [node name="Cross" instance=ExtResource("1_sumap")]
 item_data = ExtResource("2_ho0nm")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_ho0nm")
-
-[node name="MeshInstance3D" parent="." index="1"]
-mesh = SubResource("BoxMesh_c2di7")

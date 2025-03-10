@@ -5,14 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://d2r2cmpthyudk" path="res://Items/Candle/Candle Model.blend" id="3_qtvd5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c6rel"]
-resource_local_to_scene = true
-size = Vector3(0.231403, 0.210938, 0.264746)
+size = Vector3(0.25, 0.31, 0.25)
 
 [node name="Candle" instance=ExtResource("1_rdt7g")]
 item_data = ExtResource("2_c6rel")
 
 [node name="CollisionShape3D" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0114899, 0.105835, -0.0229004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
 shape = SubResource("BoxShape3D_c6rel")
 
 [node name="Candle Model" parent="." index="1" instance=ExtResource("3_qtvd5")]

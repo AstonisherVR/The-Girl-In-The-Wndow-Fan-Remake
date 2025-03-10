@@ -1,10 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://dodot6ayngpyi"]
 
-[ext_resource type="Script" uid="uid://b7g7iwr2oswi1" path="res://Items/base_item.gd" id="1_o1itp"]
+[ext_resource type="Script" uid="uid://qfxl41pn0e56" path="res://Items/base_item.gd" id="1_o1itp"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bdpob"]
-resource_local_to_scene = true
-size = Vector3(0.6, 0.6, 0.6)
+[sub_resource type="BoxShape3D" id="BoxShape3D_o1itp"]
+size = Vector3(0.5, 0.5, 0.5)
 
 [node name="Base Item" type="Area3D"]
 collision_layer = 2
@@ -12,7 +11,8 @@ script = ExtResource("1_o1itp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 unique_name_in_owner = true
-shape = SubResource("BoxShape3D_bdpob")
+shape = SubResource("BoxShape3D_o1itp")
+debug_color = Color(0.0976, 0.61, 0.59292, 0.847059)
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

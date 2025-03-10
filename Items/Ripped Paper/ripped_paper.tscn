@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://opuajfwxn6jf"]
+[gd_scene load_steps=6 format=3 uid="uid://opuajfwxn6jf"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_kmg2i"]
 [ext_resource type="Texture2D" uid="uid://dsybwyfvs0oku" path="res://General Assets/Placeholders/Placeholder Texture White.png" id="2_0s5o6"]
@@ -16,10 +16,6 @@ heightmap_enabled = true
 heightmap_scale = -16.0
 refraction_enabled = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_ouh08"]
-resource_local_to_scene = true
-size = Vector3(0.5, 0.5, 0.005)
-
 [node name="Ripped Paper" instance=ExtResource("1_kmg2i")]
 item_data = ExtResource("2_ouh08")
 
@@ -28,4 +24,3 @@ shape = SubResource("BoxShape3D_0s5o6")
 
 [node name="MeshInstance3D" parent="." index="1"]
 material_override = SubResource("StandardMaterial3D_ouh08")
-mesh = SubResource("BoxMesh_ouh08")

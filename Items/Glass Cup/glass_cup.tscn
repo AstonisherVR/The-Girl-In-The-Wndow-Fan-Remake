@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://cll1bdjhgayxp" path="res://Items/Glass Cup/Glass Cup Model.blend" id="3_n7h4i"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ydxjt"]
+radius = 0.1
+height = 0.5
 
 [node name="Glass Cup" instance=ExtResource("1_ydxjt")]
 item_data = ExtResource("2_n7h4i")

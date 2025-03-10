@@ -2,7 +2,7 @@ class_name CloseUpAreasManager extends Node
 
 var close_up_areas: Array[Node]
 
-@onready var look_sides: Dictionary = {
+@onready var look_sides: Dictionary[StringName, Node] = {
 	&"FRONT": %"Front Areas",
 	&"RIGHT": %"Right Areas",
 	&"BACK": %"Back Areas",
@@ -30,7 +30,7 @@ func _ready() -> void:
 func update_active_side(current_side: StringName = player.current_look_dir_name) -> void:
 	if not look_sides.has(current_side): return
 	disable_collisions()
-	enable_collisions((look_sides[current_side]) as Node)
+	enable_collisions(look_sides[current_side])
 
 func disable_collisions() -> void:
 	for close_up_area: CloseUpArea in close_up_areas:

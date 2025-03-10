@@ -7,7 +7,6 @@ func _ready() -> void:
 	for item: BaseItem in get_children(): item.disable_all_items_collision.connect(disable_collisions)
 	go_back_button.pressed.connect(disable_collisions)
 	player.player_interacting.connect(enable_collisions)
-	#player.player_close_up.c
 
 func disable_collisions() -> void:
 	for item: BaseItem in get_children():

@@ -1,20 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dd7tsaftvhxfs"]
+[gd_scene load_steps=4 format=3 uid="uid://dd7tsaftvhxfs"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_58d0b"]
-[ext_resource type="Resource" uid="uid://c5tbplhbhp3rl" path="res://Items/Matches/matches.tres" id="2_58d0b"]
+[ext_resource type="Resource" uid="uid://c5tbplhbhp3rl" path="res://Items/Matches/matches_data.tres" id="2_58d0b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_upufu"]
 resource_local_to_scene = true
 size = Vector3(1.1, 1.1, 1.1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_c8yhg"]
-resource_local_to_scene = true
 
 [node name="Matches" instance=ExtResource("1_58d0b")]
 item_data = ExtResource("2_58d0b")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_upufu")
-
-[node name="MeshInstance3D" parent="." index="1"]
-mesh = SubResource("BoxMesh_c8yhg")

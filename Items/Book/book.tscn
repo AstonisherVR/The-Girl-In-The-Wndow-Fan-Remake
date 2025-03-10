@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cfcwiew6nwuk2"]
+[gd_scene load_steps=5 format=3 uid="uid://cfcwiew6nwuk2"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_laq5h"]
 [ext_resource type="PackedScene" uid="uid://dcvvqa1t4f2m8" path="res://Items/Book/Book Model.blend" id="2_gkybs"]
+[ext_resource type="Resource" uid="uid://dgtexkmoux711" path="res://Items/Book/book_data.tres" id="2_v8nch"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gkybs"]
-resource_local_to_scene = true
 size = Vector3(0.15, 0.2, 0.075)
 
 [node name="Book" instance=ExtResource("1_laq5h")]
+item_data = ExtResource("2_v8nch")
 
 [node name="CollisionShape3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)

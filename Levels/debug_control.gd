@@ -14,7 +14,7 @@ func _ready() -> void:
 
 func updt_dbg() -> void:
 	var inv_text: String = ""
-	for item in player_inventory.item_data_list:
+	for item: Variant in player_inventory.item_data_list:
 		if !item:
 			inv_text += "<null>, "
 			continue
@@ -25,7 +25,7 @@ func updt_dbg() -> void:
 func _input(_event: InputEvent) -> void:
 	if OS.is_debug_build():
 		if inventory_ui.currently_selected_ui_item:
-			var ui_sel_it := inventory_ui.currently_selected_ui_item
+			var ui_sel_it: ItemUI = inventory_ui.currently_selected_ui_item
 			var itm_name: String = ui_sel_it.item_data.name
 			selected_item_label.text = "Selected Item "+ itm_name
 		else:

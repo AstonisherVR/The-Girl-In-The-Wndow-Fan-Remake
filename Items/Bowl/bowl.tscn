@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://vxivrxmu1env"]
+[gd_scene load_steps=5 format=3 uid="uid://vxivrxmu1env"]
 
 [ext_resource type="PackedScene" uid="uid://dodot6ayngpyi" path="res://Items/base_item.tscn" id="1_pg8mt"]
 [ext_resource type="Resource" uid="uid://dw5d8vxubrg6k" path="res://Items/Bowl/bowl_data.tres" id="2_qn5nb"]
+[ext_resource type="PackedScene" uid="uid://biq7l4vunomhv" path="res://Items/Bowl/Bowl Model.blend" id="3_qn5nb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pg8mt"]
-size = Vector3(0.24, 0.1, 0.255)
+size = Vector3(0.25, 0.1, 0.25)
 
 [node name="Bowl" instance=ExtResource("1_pg8mt")]
 item_data = ExtResource("2_qn5nb")
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_pg8mt")
+
+[node name="Bowl Model" parent="." index="1" instance=ExtResource("3_qn5nb")]
