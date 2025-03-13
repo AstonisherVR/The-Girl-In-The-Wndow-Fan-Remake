@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://caukvxn00n7ic"]
+[gd_scene load_steps=7 format=3 uid="uid://caukvxn00n7ic"]
 
 [ext_resource type="Script" uid="uid://bum2cjmnupma" path="res://Interactables/base_interactable.gd" id="1_fxgow"]
+[ext_resource type="Script" uid="uid://da4jhn04pkwmo" path="res://click_component.gd" id="2_7u3ck"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s3xij"]
 resource_local_to_scene = true
@@ -28,5 +29,8 @@ shape = SubResource("BoxShape3D_s3xij")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_h3yni")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="ClickComponent" type="Node" parent="."]
+script = ExtResource("2_7u3ck")
+metadata/_custom_type_script = "uid://da4jhn04pkwmo"
+
+[connection signal="clicked" from="ClickComponent" to="." method="_on_click_component_clicked"]

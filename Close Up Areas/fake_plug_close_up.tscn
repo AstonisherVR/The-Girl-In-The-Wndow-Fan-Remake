@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_l51tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4ugg4"]
-size = Vector3(1.5, 1.5, 1)
+size = Vector3(0.25, 0.25, 0.25)
 
 [node name="Fake Plug Close Up" instance=ExtResource("1_l51tw")]
 my_close_up_name = "FAKE_PLUG"

@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://kkwu20rtllhi"]
+[gd_scene load_steps=5 format=3 uid="uid://kkwu20rtllhi"]
 
 [ext_resource type="Script" uid="uid://c6ioc1owu7xce" path="res://Puzzles/base_puzzle.gd" id="1_oetf2"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oetf2"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oetf2"]
+material = SubResource("StandardMaterial3D_oetf2")
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ynog2"]
+size = Vector3(0.1, 0.01, 0.1)
+
 [node name="Base Puzzle" type="Node3D"]
 script = ExtResource("1_oetf2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_oetf2")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175, 0.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_ynog2")
+debug_color = Color(0.529341, 1, 0.743175, 0.419608)
+metadata/_edit_lock_ = true

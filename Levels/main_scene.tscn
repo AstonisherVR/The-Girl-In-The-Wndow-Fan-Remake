@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dvqmup262b7tn"]
+[gd_scene load_steps=59 format=3 uid="uid://dvqmup262b7tn"]
 
 [ext_resource type="PackedScene" uid="uid://d00gvwlu8x1q" path="res://Player/player.tscn" id="1_2fgek"]
 [ext_resource type="PackedScene" uid="uid://dvslyfa3h0y8a" path="res://House/house.tscn" id="1_dybxh"]
@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://dr468mwn6enwk" path="res://Close Up Areas/window_close_up.tscn" id="25_007jf"]
 [ext_resource type="Script" uid="uid://5g3e1oxluwub" path="res://Items/pick_up_items_manager.gd" id="25_t4laf"]
 [ext_resource type="PackedScene" uid="uid://v6jmblc3si34" path="res://Items/Glass Cup/glass_cup.tscn" id="42_nlx2q"]
+[ext_resource type="PackedScene" uid="uid://kkwu20rtllhi" path="res://Puzzles/base_puzzle.tscn" id="51_ojphd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_t4laf"]
 size = Vector3(0.75, 0.75, 0.75)
@@ -92,7 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13364, 1.47623, -3.68231)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63096, 0, -2.93975)
 
 [node name="Drawer Close Up" parent="Close Up Areas Manager/Front Areas" instance=ExtResource("7_h7sml")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74375, 0.520531, -2.98131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.74375, 0.879872, -2.98131)
 
 [node name="Right Areas" type="Node" parent="Close Up Areas Manager"]
 unique_name_in_owner = true
@@ -119,46 +120,46 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.29245, 0.531374, 2.3143)
 unique_name_in_owner = true
 
 [node name="Books Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("14_fpg2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.161629, 0, 3.47877)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.21418, 2.61871, 3.47877)
 
 [node name="Num Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("15_fbhtv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.838518, 0, 3.72782)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27243, 1.08564, 3.72782)
 
 [node name="Symb Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("19_f3kes")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.933066, 0, 3.491)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.28842, 0.546489, 3.491)
 
 [node name="Figure Puzzle Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("11_nlx2q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09243, 0, 2.894)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27306, 0.526496, 3.46831)
 
 [node name="Vampire Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("23_prlup")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6901, 0, 3.69052)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.37721, 2.40961, 3.40049)
 
 [node name="Mouse Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("13_sohhj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97234, 0, 3.36824)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.74494, 0.283689, 3.65539)
 
 [node name="Plant Close Up" parent="Close Up Areas Manager/Back Areas" instance=ExtResource("17_k6o2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.46539, 0, 3.18718)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.91892, 0.487687, 3.62019)
 
 [node name="Left Areas" type="Node" parent="Close Up Areas Manager"]
 unique_name_in_owner = true
 
 [node name="Couch Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("8_86cmt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99463, 0, 0.815533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.39951, 0.694466, 2.03309)
 
 [node name="Fake Plug Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("10_t4laf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67281, 0, 2.06261)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55476, 0.149113, 2.87286)
 
 [node name="News Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("14_7cjcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.57468, 0, -0.342263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58843, 2.45776, 0.843164)
 
 [node name="Table Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("20_68fbq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59079, 0, -0.989806)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22243, 0.567033, 0.0141329)
 
 [node name="Window Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("25_007jf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36185, 0, 1.43054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.59034, 2.21185, -2.06807)
 
 [node name="Drawer w Photo Close Up" parent="Close Up Areas Manager/Left Areas" instance=ExtResource("9_fpg2s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.78527, 0, 1.86544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29085, 0.651872, -2.02235)
 
 [node name="Pick Up Items Manager" type="Node" parent="."]
 script = ExtResource("25_t4laf")
@@ -176,7 +177,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.67875, 0, -3.17982)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84664, 1.14556, -2.87345)
 
 [node name="TV Dial" parent="Pick Up Items Manager" instance=ExtResource("10_8rkvs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20433, 2.40414, -3.02765)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.55271, 2.40414, -2.6856)
 
 [node name="Pipe Key" parent="Pick Up Items Manager" instance=ExtResource("9_nm3d2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88783, 0, -3.20266)
@@ -200,10 +201,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.37883, 0.250647, 3.0575)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848846, 0, 2.81766)
 
 [node name="Stone" parent="Pick Up Items Manager" instance=ExtResource("15_yfwm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77369, 0.421203, 3.15768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77369, 0.726773, 3.15768)
 
 [node name="Square Key" parent="Pick Up Items Manager" instance=ExtResource("14_wgp5u")]
-transform = Transform3D(0.969868, 0, -0.243632, 0, 1, 0, 0.243632, 0, 0.969868, -3.54263, 0.424281, 2.54325)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.55019, 0.150971, 2.90692)
 
 [node name="Cheese Piece" parent="Pick Up Items Manager" instance=ExtResource("12_qs7lm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.30189, 0.83117, 0)
@@ -219,27 +220,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43769, 0.963275, 2.48305)
 [node name="Blue Jacket" parent="Static Objects" instance=ExtResource("4_vdof2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06633, 2.61333, -3.64838)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Static Objects"]
+[node name="TV" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23976, 1.53515, -0.215159)
 mesh = SubResource("BoxMesh_t4laf")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Static Objects"]
+[node name="Vcr" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27793, 0.694245, -0.215626)
 mesh = SubResource("BoxMesh_nlx2q")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Static Objects"]
+[node name="Pipe" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70561, 1.84197, -3.0768)
 mesh = SubResource("CylinderMesh_t4laf")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="Static Objects"]
+[node name="Plug" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75725, 0.471572, 0.579931)
 mesh = SubResource("CapsuleMesh_t4laf")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="Static Objects"]
+[node name="Up Shelf" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5946, 2.75429, 2.28823)
 mesh = SubResource("BoxMesh_ojphd")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="Static Objects"]
+[node name="Low Shelf" type="MeshInstance3D" parent="Static Objects"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.61372, 0.442311, 2.33015)
 mesh = SubResource("BoxMesh_sohhj")
 
@@ -250,7 +251,7 @@ mesh = SubResource("BoxMesh_sohhj")
 [node name="Interactable Objects" type="Node" parent="."]
 
 [node name="Base Interactable" parent="Interactable Objects" instance=ExtResource("23_rpxjs")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71422, 0.476356, -2.99125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0489947, 1.1461, -4.26536)
 
 [node name="Player" parent="." instance=ExtResource("1_2fgek")]
 unique_name_in_owner = true
@@ -355,4 +356,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 visible = false
 metadata/_edit_lock_ = true
 
+[node name="Base Puzzle" parent="." instance=ExtResource("51_ojphd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09647, 0.825349, -1.98625)
+
+[connection signal="mouse_entered" from="Close Up Areas Manager/Front Areas/Coat Rack Close Up" to="Close Up Areas Manager/Front Areas/Coat Rack Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Front Areas/Coat Rack Close Up" to="Close Up Areas Manager/Front Areas/Coat Rack Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Front Areas/Light Switch Close Up" to="Close Up Areas Manager/Front Areas/Light Switch Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Front Areas/Light Switch Close Up" to="Close Up Areas Manager/Front Areas/Light Switch Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Front Areas/Floor Plank Close Up" to="Close Up Areas Manager/Front Areas/Floor Plank Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Front Areas/Floor Plank Close Up" to="Close Up Areas Manager/Front Areas/Floor Plank Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Front Areas/Drawer Close Up" to="Close Up Areas Manager/Front Areas/Drawer Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Front Areas/Drawer Close Up" to="Close Up Areas Manager/Front Areas/Drawer Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/Pipe Close Up" to="Close Up Areas Manager/Right Areas/Pipe Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/Pipe Close Up" to="Close Up Areas Manager/Right Areas/Pipe Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/TV Close Up" to="Close Up Areas Manager/Right Areas/TV Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/TV Close Up" to="Close Up Areas Manager/Right Areas/TV Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/VCR Close Up" to="Close Up Areas Manager/Right Areas/VCR Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/VCR Close Up" to="Close Up Areas Manager/Right Areas/VCR Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/Power Cable Close Up" to="Close Up Areas Manager/Right Areas/Power Cable Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/Power Cable Close Up" to="Close Up Areas Manager/Right Areas/Power Cable Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/Uper Shelf Close Up" to="Close Up Areas Manager/Right Areas/Uper Shelf Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/Uper Shelf Close Up" to="Close Up Areas Manager/Right Areas/Uper Shelf Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Right Areas/Lower Shelf Close Up" to="Close Up Areas Manager/Right Areas/Lower Shelf Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Right Areas/Lower Shelf Close Up" to="Close Up Areas Manager/Right Areas/Lower Shelf Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Books Close Up" to="Close Up Areas Manager/Back Areas/Books Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Books Close Up" to="Close Up Areas Manager/Back Areas/Books Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Num Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Num Puzzle Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Num Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Num Puzzle Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Symb Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Symb Puzzle Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Symb Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Symb Puzzle Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Figure Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Figure Puzzle Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Figure Puzzle Close Up" to="Close Up Areas Manager/Back Areas/Figure Puzzle Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Vampire Close Up" to="Close Up Areas Manager/Back Areas/Vampire Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Vampire Close Up" to="Close Up Areas Manager/Back Areas/Vampire Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Mouse Close Up" to="Close Up Areas Manager/Back Areas/Mouse Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Mouse Close Up" to="Close Up Areas Manager/Back Areas/Mouse Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Back Areas/Plant Close Up" to="Close Up Areas Manager/Back Areas/Plant Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Back Areas/Plant Close Up" to="Close Up Areas Manager/Back Areas/Plant Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/Couch Close Up" to="Close Up Areas Manager/Left Areas/Couch Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/Couch Close Up" to="Close Up Areas Manager/Left Areas/Couch Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/Fake Plug Close Up" to="Close Up Areas Manager/Left Areas/Fake Plug Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/Fake Plug Close Up" to="Close Up Areas Manager/Left Areas/Fake Plug Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/News Close Up" to="Close Up Areas Manager/Left Areas/News Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/News Close Up" to="Close Up Areas Manager/Left Areas/News Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/Table Close Up" to="Close Up Areas Manager/Left Areas/Table Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/Table Close Up" to="Close Up Areas Manager/Left Areas/Table Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/Window Close Up" to="Close Up Areas Manager/Left Areas/Window Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/Window Close Up" to="Close Up Areas Manager/Left Areas/Window Close Up" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Close Up Areas Manager/Left Areas/Drawer w Photo Close Up" to="Close Up Areas Manager/Left Areas/Drawer w Photo Close Up" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Close Up Areas Manager/Left Areas/Drawer w Photo Close Up" to="Close Up Areas Manager/Left Areas/Drawer w Photo Close Up" method="_on_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/Go Back Button" to="Player" method="_on_go_back_button_pressed"]

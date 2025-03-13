@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_kp5bn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kt227"]
-resource_local_to_scene = true
-size = Vector3(1.5, 1.5, 1)
+size = Vector3(0.25, 1.1, 1.1)
 
 [node name="News Close Up" instance=ExtResource("1_kp5bn")]
 my_close_up_name = "NEWS"

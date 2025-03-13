@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://btcoqdvpv6xxa"]
+[gd_scene load_steps=4 format=3 uid="uid://btcoqdvpv6xxa"]
 
 [ext_resource type="Script" uid="uid://bcba2c8rvun0x" path="res://Close Up Areas/close_up_area.gd" id="1_fl5ps"]
+[ext_resource type="Script" uid="uid://da4jhn04pkwmo" path="res://click_component.gd" id="2_03osb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rpxjs"]
 size = Vector3(1.5, 1.5, 1)
@@ -13,5 +14,8 @@ unique_name_in_owner = true
 shape = SubResource("BoxShape3D_rpxjs")
 debug_color = Color(1, 0, 0, 1)
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="ClickComponent" type="Node" parent="."]
+script = ExtResource("2_03osb")
+metadata/_custom_type_script = "uid://da4jhn04pkwmo"
+
+[connection signal="clicked" from="ClickComponent" to="." method="_on_click_component_clicked"]
