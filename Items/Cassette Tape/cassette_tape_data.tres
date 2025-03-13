@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bddtks7tqxhi0"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bddtks7tqxhi0"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_650md"]
+[ext_resource type="Texture2D" uid="uid://ce2fygk5mshts" path="res://Items/Cassette Tape/Cassette Tape Icon.png" id="2_wv7om"]
 
 [resource]
 script = ExtResource("1_650md")
 name = &"Cassette Tape"
+ui_texture = ExtResource("2_wv7om")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_650md")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cvrnkt1raa2lr"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_w74d7"]
-[ext_resource type="Texture2D" uid="uid://d2coppip46fjt" path="res://Items/Hammer/Sprite.png" id="2_bdmo5"]
+[ext_resource type="Texture2D" uid="uid://bf6krewj7x4e2" path="res://Items/Hammer/Hammer Icon.png" id="2_klaqx"]
 
 [resource]
 script = ExtResource("1_w74d7")
 name = "Hammer"
-texture = ExtResource("2_bdmo5")
-metadata/_custom_type_script = ExtResource("1_w74d7")
+ui_texture = ExtResource("2_klaqx")
+can_combine_with_item = false
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

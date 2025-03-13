@@ -3,7 +3,6 @@ signal clicked
 
 var mouse_in: bool = false
 @onready var parent: Area3D = get_parent() as Area3D
-@export var action_function: Callable
 
 func _ready() -> void:
 	if parent is Area3D:

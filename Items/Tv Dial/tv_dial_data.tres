@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cjgjakgjqloqj"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cjgjakgjqloqj"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_3qjj7"]
+[ext_resource type="Texture2D" uid="uid://0d51csm4mdqg" path="res://Items/Tv Dial/Tv Dial Icon.png" id="2_fbqg0"]
 
 [resource]
 script = ExtResource("1_3qjj7")
 name = &"TV Dial"
+ui_texture = ExtResource("2_fbqg0")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_3qjj7")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

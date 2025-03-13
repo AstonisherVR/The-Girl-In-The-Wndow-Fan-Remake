@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://deis7nn65vwcc"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://deis7nn65vwcc"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_4iujl"]
+[ext_resource type="Texture2D" uid="uid://brrvffqbgnseh" path="res://Items/Cheese Piece/Cheese Piece Icon.png" id="2_hdkky"]
 
 [resource]
 script = ExtResource("1_4iujl")
 name = &"Cheese Piece"
+ui_texture = ExtResource("2_hdkky")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_4iujl")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

@@ -3,7 +3,7 @@ class_name Player extends Node3D
 signal looking_dir(side_name: StringName)
 signal player_interacting
 
-@onready var inventory: InventoryResource = preload("res://Player/Player_Inventory_Data.tres")
+@onready var inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
 @onready var go_back_button: TextureButton = %"Go Back Button"
 @export var move_wait_time: float = 0.15	# Seconds
 

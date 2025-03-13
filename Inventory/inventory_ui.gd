@@ -67,11 +67,11 @@ func update_item_ui_to_match_item_data() -> void:
 
 	# Updates each UI slot with the corresponding inventory item
 	for index: int in range(player_inventory.item_data_list.size()):
-		# Gets the current item data of the iteration from the player's inventory
+		# Gets the current item data of the iteration from the player's inventory items
 		var current_item_data: ItemResource = player_inventory.item_data_list[index]
 		# Gets the current slot UI of the iteration
 		var current_item_slot_ui: ItemSlotUI = (ui_item_slots[index] as ItemSlotUI)
-		# Gets the c	urrent item UI of the iteration from the slot
+		# Gets the current item UI of the iteration from the slot
 		var current_item_ui: ItemUI = current_item_slot_ui.my_child_item_ui
 
 		# Will skip this iteration if the item data is null
@@ -80,10 +80,12 @@ func update_item_ui_to_match_item_data() -> void:
 			if current_item_ui:
 				current_item_slot_ui.remove_item_ui()
 			continue
+
 		# If there's no UI for the item, a new ItemUI gets created
 		if not current_item_ui:
 			current_item_ui = ItemUI.new()
 			current_item_slot_ui.insert_item_to_ui_slot(current_item_ui)
+
 		# Matches the item data to the item UI
 		current_item_ui.item_data = current_item_data
 		current_item_ui.update_ui_item()

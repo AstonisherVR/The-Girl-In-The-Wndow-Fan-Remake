@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cpgkdvsmmflt4"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cpgkdvsmmflt4"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_lakf6"]
+[ext_resource type="Texture2D" uid="uid://dx1j4e11n04gi" path="res://Items/Square Key/Square Key Icon.png" id="2_1jlxt"]
 
 [resource]
 script = ExtResource("1_lakf6")
 name = &"Square Key"
+ui_texture = ExtResource("2_1jlxt")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_lakf6")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

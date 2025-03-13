@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bxqrrlby66th7"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bxqrrlby66th7"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_0uhu0"]
+[ext_resource type="Texture2D" uid="uid://ygmtactkbp7u" path="res://Items/Ripped Paper/Ripped Paper Icon.png" id="2_rh8ai"]
 
 [resource]
 script = ExtResource("1_0uhu0")
 name = &"Ripped Paper"
+ui_texture = ExtResource("2_rh8ai")
 can_combine_with_item = true
-metadata/_custom_type_script = ExtResource("1_0uhu0")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

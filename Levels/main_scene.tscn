@@ -357,7 +357,7 @@ visible = false
 metadata/_edit_lock_ = true
 
 [node name="Base Puzzle" parent="." instance=ExtResource("51_ojphd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.09647, 0.825349, -1.98625)
+transform = Transform3D(1, 0, 0, 0, 0.472735, -0.881204, 0, 0.881204, 0.472735, 2.09647, 1.15122, -1.94963)
 
 [connection signal="mouse_entered" from="Close Up Areas Manager/Front Areas/Coat Rack Close Up" to="Close Up Areas Manager/Front Areas/Coat Rack Close Up" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Close Up Areas Manager/Front Areas/Coat Rack Close Up" to="Close Up Areas Manager/Front Areas/Coat Rack Close Up" method="_on_mouse_exited"]

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://b2npre83lx064"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://b2npre83lx064"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_pujj2"]
+[ext_resource type="Texture2D" uid="uid://dlybo1hg0joah" path="res://Items/Plastic Handle/Plastic Handle Icon.png" id="2_p515k"]
 
 [resource]
 script = ExtResource("1_pujj2")
 name = &"Plastic Handle"
+ui_texture = ExtResource("2_p515k")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_pujj2")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://ck6ov55slf5ky"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://ck6ov55slf5ky"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_fh6u4"]
+[ext_resource type="Texture2D" uid="uid://dl8atljsuemxo" path="res://Items/Metal Pipe/Metal Pipe Icon.png" id="2_k02dl"]
 
 [resource]
 script = ExtResource("1_fh6u4")
 name = &"Metal Pipe"
+ui_texture = ExtResource("2_k02dl")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_fh6u4")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

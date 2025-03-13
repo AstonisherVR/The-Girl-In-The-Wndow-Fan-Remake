@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://b7l7ed7nvwich"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://b7l7ed7nvwich"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_ctldt"]
+[ext_resource type="Texture2D" uid="uid://cinxuucw0wmow" path="res://Items/Clues Book/Clues Book Icon.png" id="2_wp05m"]
 
 [resource]
 script = ExtResource("1_ctldt")
 name = &"Clues Book"
+ui_texture = ExtResource("2_wp05m")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_ctldt")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

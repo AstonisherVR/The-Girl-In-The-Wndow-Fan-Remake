@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bthm7j8xmfuek"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bthm7j8xmfuek"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_ptrar"]
+[ext_resource type="Texture2D" uid="uid://cterr63hjhsxg" path="res://Items/Mirror/Mirror Icon.png" id="2_r46nt"]
 
 [resource]
 script = ExtResource("1_ptrar")
 name = &"Mirror"
+ui_texture = ExtResource("2_r46nt")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_ptrar")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

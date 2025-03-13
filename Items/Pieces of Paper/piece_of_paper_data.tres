@@ -1,18 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=4 format=3 uid="uid://crh5l41rhik1i"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://crh5l41rhik1i"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_15nda"]
-
-[sub_resource type="Gradient" id="Gradient_15nda"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.883378, 0.883378, 0.883378, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_2hb8m"]
-gradient = SubResource("Gradient_15nda")
-height = 96
+[ext_resource type="Texture2D" uid="uid://043yvbg37aaw" path="res://Items/Pieces of Paper/Pieces of Paper Icon.png" id="2_6ufp7"]
 
 [resource]
 script = ExtResource("1_15nda")
 name = "Paper"
-texture = SubResource("GradientTexture2D_2hb8m")
+ui_texture = ExtResource("2_6ufp7")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_15nda")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

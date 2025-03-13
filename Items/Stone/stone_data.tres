@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://8n0tq04rl2l6"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://8n0tq04rl2l6"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_dggni"]
+[ext_resource type="Texture2D" uid="uid://ctpc03duxatkk" path="res://Items/Stone/Stone Icon.png" id="2_hrxqy"]
 
 [resource]
 script = ExtResource("1_dggni")
 name = &"Defult"
+ui_texture = ExtResource("2_hrxqy")
 can_combine_with_item = true
-metadata/_custom_type_script = ExtResource("1_dggni")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

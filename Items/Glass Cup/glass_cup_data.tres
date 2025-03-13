@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://bn2pfgi651ci7"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://bn2pfgi651ci7"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_fb15q"]
+[ext_resource type="Texture2D" uid="uid://dlo3i4agytpj" path="res://Items/Glass Cup/Glass Cup Icon.png" id="2_o0wt2"]
 
 [resource]
 script = ExtResource("1_fb15q")
 name = &"Glass Cup"
+ui_texture = ExtResource("2_o0wt2")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_fb15q")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

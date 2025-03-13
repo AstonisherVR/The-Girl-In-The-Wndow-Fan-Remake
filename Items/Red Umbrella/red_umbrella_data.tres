@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://dywrgv2i3tq04"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://dywrgv2i3tq04"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_fsccw"]
+[ext_resource type="Texture2D" uid="uid://cmnrxxi7h5wt4" path="res://Items/Red Umbrella/Red Umbrella Icon.png" id="2_mtwk0"]
 
 [resource]
 script = ExtResource("1_fsccw")
 name = &"Umbrella"
+ui_texture = ExtResource("2_mtwk0")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_fsccw")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

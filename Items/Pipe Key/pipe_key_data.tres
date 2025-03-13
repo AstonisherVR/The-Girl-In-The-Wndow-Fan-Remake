@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://ncv842fyhqvh"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://ncv842fyhqvh"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_bq6dg"]
+[ext_resource type="Texture2D" uid="uid://uekosm7604s" path="res://Items/Pipe Key/Pipe Key Icon.png" id="2_ko3yd"]
 
 [resource]
 script = ExtResource("1_bq6dg")
 name = &"Pipe Key"
+ui_texture = ExtResource("2_ko3yd")
 can_combine_with_item = true
-metadata/_custom_type_script = ExtResource("1_bq6dg")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

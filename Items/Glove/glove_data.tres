@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://cfcvr088jlobq"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cfcvr088jlobq"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_qi154"]
+[ext_resource type="Texture2D" uid="uid://dkdiy2xo1gop" path="res://Items/Glove/Glove Icon.png" id="2_rekt4"]
 
 [resource]
 script = ExtResource("1_qi154")
 name = &"Glove"
+ui_texture = ExtResource("2_rekt4")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_qi154")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

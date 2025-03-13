@@ -1,9 +1,13 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://diypkjkbko5nh"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://diypkjkbko5nh"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_0ktwm"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0ktwm"]
+size = Vector2(64, 64)
 
 [resource]
 script = ExtResource("1_0ktwm")
 name = &"Defult"
+ui_texture = SubResource("PlaceholderTexture2D_0ktwm")
 can_combine_with_item = true
-metadata/_custom_type_script = ExtResource("1_0ktwm")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

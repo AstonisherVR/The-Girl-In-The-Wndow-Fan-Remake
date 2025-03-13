@@ -1,11 +1,11 @@
 [gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://dgtexkmoux711"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_tv45l"]
-[ext_resource type="Texture2D" uid="uid://be1g82f32o1c0" path="res://Items/Book/Sprite.png" id="2_exekt"]
+[ext_resource type="Texture2D" uid="uid://c3fxuveyehxpo" path="res://Items/Book/Book Icon.png" id="2_exekt"]
 
 [resource]
 script = ExtResource("1_tv45l")
 name = &"Book"
-texture = ExtResource("2_exekt")
+ui_texture = ExtResource("2_exekt")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_tv45l")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

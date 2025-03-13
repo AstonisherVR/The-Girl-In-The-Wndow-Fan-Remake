@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://kdrk5slefd5r"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://kdrk5slefd5r"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_c4fif"]
+[ext_resource type="Texture2D" uid="uid://b2xg0hxny4h5a" path="res://Items/Mouse/Mouse Icon.png" id="2_dkn5f"]
 
 [resource]
 script = ExtResource("1_c4fif")
 name = &"Mouse"
+ui_texture = ExtResource("2_dkn5f")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_c4fif")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"

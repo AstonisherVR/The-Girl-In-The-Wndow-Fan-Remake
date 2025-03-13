@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="ItemResource" load_steps=2 format=3 uid="uid://c5tbplhbhp3rl"]
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://c5tbplhbhp3rl"]
 
 [ext_resource type="Script" uid="uid://dsv78uxm38t7d" path="res://Items/ItemResource.gd" id="1_kqx02"]
+[ext_resource type="Texture2D" uid="uid://c7nv6paxx0yko" path="res://Items/Matches/Matches Icon.png" id="2_wbh2i"]
 
 [resource]
 script = ExtResource("1_kqx02")
 name = &"Matches"
+ui_texture = ExtResource("2_wbh2i")
 can_combine_with_item = false
-metadata/_custom_type_script = ExtResource("1_kqx02")
+metadata/_custom_type_script = "uid://dsv78uxm38t7d"
