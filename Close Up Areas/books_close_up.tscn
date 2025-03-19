@@ -3,11 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_hp1vx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yu28p"]
-size = Vector3(1.5, 1.5, 1)
+size = Vector3(1.4, 1, 0.7)
 
 [node name="Books Close Up" instance=ExtResource("1_hp1vx")]
 my_close_up_name = "BOOKS"
 
 [node name="CollisionShape3D" parent="." index="0"]
 shape = SubResource("BoxShape3D_yu28p")
-debug_color = Color(0.86, 0.372667, 0, 1)

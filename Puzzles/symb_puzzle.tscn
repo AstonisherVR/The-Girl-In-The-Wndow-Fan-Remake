@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bk0knx61i6evq"]
+
+[ext_resource type="Script" uid="uid://du5v7t1ryoyh" path="res://Puzzles/symb_puzzle.gd" id="1_hyn14"]
+[ext_resource type="PackedScene" uid="uid://chbuupsri56af" path="res://Puzzles/puzz_but.tscn" id="2_hyn14"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wo2s"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1wo2s"]
+material = SubResource("StandardMaterial3D_1wo2s")
+size = Vector3(1, 0.825, 1)
+
+[node name="Symb Puzzle" type="Node3D"]
+script = ExtResource("1_hyn14")
+
+[node name="BodyMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_1wo2s")
+
+[node name="Puzz But1" parent="." instance=ExtResource("2_hyn14")]
+unique_name_in_owner = true
+
+[node name="Puzz But2" parent="." instance=ExtResource("2_hyn14")]
+unique_name_in_owner = true
+
+[node name="Puzz But3" parent="." instance=ExtResource("2_hyn14")]
+unique_name_in_owner = true
+
+[node name="Puzz But4" parent="." instance=ExtResource("2_hyn14")]
+unique_name_in_owner = true

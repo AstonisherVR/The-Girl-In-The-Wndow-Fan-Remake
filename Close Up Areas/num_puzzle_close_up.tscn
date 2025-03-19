@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://btcoqdvpv6xxa" path="res://Close Up Areas/base_close_up_area.tscn" id="1_tf22q"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ptwyb"]
-size = Vector3(0.6, 0.4, 0.6)
+size = Vector3(0.6, 0.4, 0.5)
 
 [node name="Num Puzzle Close Up" instance=ExtResource("1_tf22q")]
 my_close_up_name = "NUMBERS_PUZZLE_BOX"

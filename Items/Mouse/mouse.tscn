@@ -4,8 +4,7 @@
 [ext_resource type="Resource" uid="uid://kdrk5slefd5r" path="res://Items/Mouse/mouse_data.tres" id="2_m7gmr"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m7gmr"]
-resource_local_to_scene = true
-size = Vector3(1.1, 1.1, 1.1)
+size = Vector3(0.3, 0.2, 0.3)
 
 [node name="Mouse" instance=ExtResource("1_lyrhe")]
 item_data = ExtResource("2_m7gmr")

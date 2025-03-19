@@ -4,7 +4,7 @@ class_name InventoryUI extends NinePatchRect
 @onready var player_inventory: InventoryResource = preload("uid://bwv3dsew20e5h")
 @onready var ui_item_slots: Array[Node] = %"HBox Items Container".get_children()
 
-## Tracks the currently selected UI item TextureRect
+## Tracks the currently selected UI item. ItemUI is a TextureRect
 static var currently_selected_ui_item: ItemUI
 
 func _ready() -> void:
