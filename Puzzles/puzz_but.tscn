@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://chbuupsri56af"]
+[gd_scene load_steps=8 format=3 uid="uid://chbuupsri56af"]
 
 [ext_resource type="Script" uid="uid://da4jhn04pkwmo" path="res://click_component.gd" id="1_pqxyq"]
 [ext_resource type="Script" uid="uid://dqygq1drjhv3q" path="res://Puzzles/puzz_but.gd" id="1_uvuv3"]
+[ext_resource type="Texture2D" uid="uid://dom1uayettmb8" path="res://Puzzles/Symbols Texture-sheet.png" id="2_8jpfx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ynog2"]
-size = Vector3(0.1, 0.019, 0.1)
+size = Vector3(0.1, 0.1, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynog2"]
 
@@ -14,6 +15,9 @@ material = SubResource("StandardMaterial3D_ynog2")
 text = "1"
 font_size = 12
 
+[sub_resource type="BoxMesh" id="BoxMesh_1bfpt"]
+size = Vector3(0.2, 0.2, 0.2)
+
 [node name="Puzz But" type="Area3D"]
 script = ExtResource("1_uvuv3")
 
@@ -21,12 +25,22 @@ script = ExtResource("1_uvuv3")
 unique_name_in_owner = true
 shape = SubResource("BoxShape3D_ynog2")
 debug_color = Color(0.529341, 1, 0.743175, 0.419608)
-metadata/_edit_lock_ = true
 
 [node name="NumberMesh" type="MeshInstance3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+visible = false
 mesh = SubResource("TextMesh_culp1")
+
+[node name="SymbolMesh" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+mesh = SubResource("BoxMesh_1bfpt")
+
+[node name="Sprite3D" type="Sprite3D" parent="SymbolMesh"]
+unique_name_in_owner = true
+transform = Transform3D(0.02, 0, 0, 0, -8.74228e-10, 0.02, 0, -0.02, -8.74228e-10, 0, 0.101103, 0)
+texture = ExtResource("2_8jpfx")
+vframes = 10
 
 [node name="ClickComponent" type="Node" parent="."]
 script = ExtResource("1_pqxyq")

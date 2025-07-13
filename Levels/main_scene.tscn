@@ -49,7 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://dr468mwn6enwk" path="res://Close Up Areas/window_close_up.tscn" id="25_007jf"]
 [ext_resource type="Script" uid="uid://5g3e1oxluwub" path="res://Items/pick_up_items_manager.gd" id="25_t4laf"]
 [ext_resource type="PackedScene" uid="uid://v6jmblc3si34" path="res://Items/Glass Cup/glass_cup.tscn" id="42_nlx2q"]
-[ext_resource type="PackedScene" uid="uid://kkwu20rtllhi" path="res://Puzzles/base_puzzle.tscn" id="51_ojphd"]
+[ext_resource type="PackedScene" uid="uid://kkwu20rtllhi" path="res://Puzzles/num_puzzle.tscn" id="51_ojphd"]
 [ext_resource type="Script" uid="uid://csxqqpfttvrm7" path="res://debugger.gd" id="52_7cjcw"]
 [ext_resource type="PackedScene" uid="uid://bk0knx61i6evq" path="res://Puzzles/symb_puzzle.tscn" id="52_sohhj"]
 
@@ -269,10 +269,10 @@ omni_range = 6.5
 omni_attenuation = 1.1
 
 [node name="Base Puzzle" parent="." instance=ExtResource("51_ojphd")]
-transform = Transform3D(-0.999269, 0.0262546, 0.0277958, -0.00949095, 0.533896, -0.845496, -0.0370383, -0.845141, -0.533257, 2.26699, 1.15474, 3.3634)
+transform = Transform3D(1, 0, 0, 0, 0.403082, 0.915163, 0, -0.915163, 0.403082, 2.26699, 1.15474, 3.3634)
 
 [node name="Symb Puzzle" parent="." instance=ExtResource("52_sohhj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02697, 0.436877, 3.4175)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32639, 0.436877, 3.66007)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
